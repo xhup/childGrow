@@ -1,0 +1,50 @@
+[ 2017-04-10T14:37:33+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001901s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008908s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0369s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '' AND `userPassword` = '' LIMIT 1   [ RunTime:0.0013s ]
+
+[ 2017-04-10T16:36:25+08:00 ] 192.168.1.118 /childGrow/Mobile/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009553s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `ch_user` WHERE ( userAccount='147258' ) LIMIT 1   [ RunTime:0.0344s ]
+SQL: INSERT INTO `ch_user` (`userAccount`,`userPassword`,`userName`) VALUES ('147258','dfgh','华国锋') [ RunTime:0.0714s ]
+ERR: 1406:Data too long for column 'childID' at row 1
+ [ SQL语句 ] : INSERT INTO `ch_child_base_info` (`userAccount`,`childID`,`childName`,`childBirthdate`,`childSex`) VALUES ('147258','&lt;UITextField: 0x7fced0f7e150; frame = (10 130; 300 30); text = \'585847\'; opaque = NO; gestureRecognizers = &lt;NSArray: 0x600000440270&gt;; layer = &lt;CALayer: 0x60000022ac00&gt;&gt;','&lt;UITextField: 0x7fced0c75ff0; frame = (10 10; 300 30); text = \'肝硬化\'; opaque = NO; gestureRecognizers = &lt;NSArray: 0x60000025ecc0&gt;; layer = &lt;CALayer: 0x608000237280&gt;&gt;','&lt;UITextField: 0x7fced0f7d860; frame = (10 90; 300 30); text = \'2015年2月10日\'; opaque = NO; gestureRecognizers = &lt;NSArray: 0x60000025eab0&gt;; layer = &lt;CALayer: 0x60000022aba0&gt;&gt;','男')
+ERR: 1406:Data too long for column 'childID' at row 1
+ [ SQL语句 ] : INSERT INTO `ch_child_base_info` (`userAccount`,`childID`,`childName`,`childBirthdate`,`childSex`) VALUES ('147258','&lt;UITextField: 0x7fced0f7e150; frame = (10 130; 300 30); text = \'585847\'; opaque = NO; gestureRecognizers = &lt;NSArray: 0x600000440270&gt;; layer = &lt;CALayer: 0x60000022ac00&gt;&gt;','&lt;UITextField: 0x7fced0c75ff0; frame = (10 10; 300 30); text = \'肝硬化\'; opaque = NO; gestureRecognizers = &lt;NSArray: 0x60000025ecc0&gt;; layer = &lt;CALayer: 0x608000237280&gt;&gt;','&lt;UITextField: 0x7fced0f7d860; frame = (10 90; 300 30); text = \'2015年2月10日\'; opaque = NO; gestureRecognizers = &lt;NSArray: 0x60000025eab0&gt;; layer = &lt;CALayer: 0x60000022aba0&gt;&gt;','男')
+
+[ 2017-04-10T16:44:26+08:00 ] 192.168.1.118 /childGrow/Mobile/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002140s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0154s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `ch_user` WHERE ( userAccount='159258' ) LIMIT 1   [ RunTime:0.0195s ]
+SQL: INSERT INTO `ch_user` (`userAccount`,`userPassword`,`userName`) VALUES ('159258','4444','怪不得') [ RunTime:0.0394s ]
+SQL: INSERT INTO `ch_child_base_info` (`userAccount`,`childID`,`childName`,`childBirthdate`,`childSex`) VALUES ('159258','77777777','四四','2013年4月10日','男') [ RunTime:0.0355s ]
+
+[ 2017-04-10T16:50:42+08:00 ] 192.168.1.118 /childGrow/Mobile/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002366s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0151s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `ch_user` WHERE ( userAccount='159258' ) LIMIT 1   [ RunTime:0.0205s ]
+

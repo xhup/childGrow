@@ -1,0 +1,180 @@
+[ 2017-04-11T14:13:47+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001354s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0478s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = '4444' LIMIT 1   [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0121s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='159258' )  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0180s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='159258' )  [ RunTime:0.0007s ]
+
+[ 2017-04-11T14:15:41+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = '4444' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0047s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='159258' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0129s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='159258' )  [ RunTime:0.0002s ]
+
+[ 2017-04-11T14:20:48+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = '4444' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0159s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='159258' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0122s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='159258' )  [ RunTime:0.0009s ]
+
+[ 2017-04-11T14:23:15+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002286s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0217s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = '4444' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0137s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='159258' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0049s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='159258' )  [ RunTime:0.0004s ]
+
+[ 2017-04-11T14:23:52+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = '4444' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0116s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='159258' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0135s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='159258' )  [ RunTime:0.0004s ]
+
+[ 2017-04-11T14:24:27+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0132s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = '4444' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0141s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='159258' )  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0070s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='159258' )  [ RunTime:0.0005s ]
+
+[ 2017-04-11T14:25:52+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002122s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '' AND `userPassword` = '' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-11T14:26:32+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '' AND `userPassword` = '' LIMIT 1   [ RunTime:0.0013s ]
+
+[ 2017-04-11T14:42:21+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001252s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '' AND `userPassword` = '' LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2017-04-11T14:42:33+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = '4444' LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0122s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='159258' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0057s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='159258' )  [ RunTime:0.0006s ]
+
+[ 2017-04-11T19:54:54+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011838s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0278s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2017-04-11T19:56:07+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001689s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-04-11T19:56:54+08:00 ] 192.168.1.118 /childGrow/Mobile/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0137s ]
+SQL: SELECT * FROM `ch_user` WHERE ( userAccount='159258' ) LIMIT 1   [ RunTime:0.0014s ]
+
+[ 2017-04-11T19:59:46+08:00 ] 192.168.1.118 /childGrow/Mobile/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0152s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ch_user` WHERE ( userAccount='159258' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-11T20:00:44+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '159258' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0004s ]
+

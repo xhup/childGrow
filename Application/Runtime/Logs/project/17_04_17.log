@@ -1,0 +1,961 @@
+[ 2017-04-17T13:58:54+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001099s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0030s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0032s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+
+[ 2017-04-17T13:59:36+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0136s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childHeight`='100' WHERE ( childID='88888888'and importTime='2017年4月17日' ) [ RunTime:0.0012s ]
+
+[ 2017-04-17T14:06:24+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0054s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0042s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0004s ]
+
+[ 2017-04-17T14:08:43+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001552s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0052s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年4月17日','123456','88888888','116.5') [ RunTime:0.0521s ]
+
+[ 2017-04-17T14:09:41+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001795s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0124s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childHeight`='156.3' WHERE ( childID='88888888'and importTime='2017年4月17日' ) [ RunTime:0.0428s ]
+
+[ 2017-04-17T14:13:02+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0038s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0035s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+
+[ 2017-04-17T14:42:55+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0039s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0029s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+
+[ 2017-04-17T14:50:27+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0024s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='24.56028' WHERE ( childID='88888888'and importTime='2017年4月17日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='24.56028' WHERE ( childID='88888888'and importTime='2017年4月17日' )
+
+[ 2017-04-17T14:50:28+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0036s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年4月17日' ) [ RunTime:0.0419s ]
+
+[ 2017-04-17T14:51:12+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0054s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0058s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+
+[ 2017-04-17T14:59:57+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0036s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0024s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0002s ]
+
+[ 2017-04-17T15:00:20+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0032s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年4月16日','123456','88888888','101') [ RunTime:0.0434s ]
+
+[ 2017-04-17T15:00:50+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0096s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='59' WHERE ( childID='88888888'and importTime='2017年4月16日' ) [ RunTime:0.0219s ]
+
+[ 2017-04-17T15:00:51+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0285s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='57.83747' WHERE ( childID='88888888'and importTime='2017年4月16日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='57.83747' WHERE ( childID='88888888'and importTime='2017年4月16日' )
+
+[ 2017-04-17T15:02:04+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0040s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0034s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+
+[ 2017-04-17T15:26:17+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0067s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0069s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0006s ]
+
+[ 2017-04-17T15:30:02+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0068s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0090s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0008s ]
+
+[ 2017-04-17T15:32:47+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0098s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeadc`) VALUES ('2017年4月19日','123456','88888888','45') [ RunTime:0.0331s ]
+
+[ 2017-04-17T15:37:56+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0048s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0032s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+
+[ 2017-04-17T15:38:15+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0103s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年4月9日','123456','88888888','91.4') [ RunTime:0.0366s ]
+
+[ 2017-04-17T15:39:45+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0036s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0039s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+
+[ 2017-04-17T15:40:30+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001762s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0139s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='71.82222' WHERE ( childID='88888888'and importTime='2017年4月9日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='71.82222' WHERE ( childID='88888888'and importTime='2017年4月9日' )
+
+[ 2017-04-17T15:40:32+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001778s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0101s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年4月9日' ) [ RunTime:0.0283s ]
+
+[ 2017-04-17T15:42:12+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0096s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0095s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0008s ]
+
+[ 2017-04-17T16:28:43+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001573s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0105s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0099s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0009s ]
+
+[ 2017-04-17T16:28:59+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001781s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0100s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2016年4月17日','123456','88888888','100') [ RunTime:0.0432s ]
+
+[ 2017-04-17T16:29:11+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000932s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0111s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2016年4月17日' ) [ RunTime:0.0448s ]
+
+[ 2017-04-17T16:29:12+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002235s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0104s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childBMI`='60' WHERE ( childID='88888888'and importTime='2016年4月17日' ) [ RunTime:0.0375s ]
+
+[ 2017-04-17T16:29:47+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001695s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0094s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0058s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+
+[ 2017-04-17T16:31:24+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0098s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2018年4月17日','123456','88888888','121') [ RunTime:0.0252s ]
+
+[ 2017-04-17T16:31:43+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001722s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0098s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0102s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0009s ]
+
+[ 2017-04-17T16:32:10+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001959s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0111s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2018年4月17日' ) [ RunTime:0.0439s ]
+
+[ 2017-04-17T16:32:11+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0122s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='40.9808' WHERE ( childID='88888888'and importTime='2018年4月17日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='40.9808' WHERE ( childID='88888888'and importTime='2018年4月17日' )
+
+[ 2017-04-17T16:32:47+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0109s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0105s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0010s ]
+
+[ 2017-04-17T16:34:27+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000926s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001299s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0046s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='61.2' WHERE ( childID='88888888'and importTime='2018年4月17日' ) [ RunTime:0.0466s ]
+
+[ 2017-04-17T16:36:04+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0108s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='41.80042' WHERE ( childID='88888888'and importTime='2018年4月17日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='41.80042' WHERE ( childID='88888888'and importTime='2018年4月17日' )
+
+[ 2017-04-17T16:42:32+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001197s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0104s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0101s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0009s ]
+
+[ 2017-04-17T16:43:09+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001389s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0102s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2018年4月18日','123456','88888888','99') [ RunTime:0.0351s ]
+
+[ 2017-04-17T16:43:52+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001198s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0106s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2018年4月18日' ) [ RunTime:0.0356s ]
+
+[ 2017-04-17T16:43:53+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0116s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='61.21824' WHERE ( childID='88888888'and importTime='2018年4月18日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='61.21824' WHERE ( childID='88888888'and importTime='2018年4月18日' )
+
+[ 2017-04-17T20:44:10+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001259s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0146s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0166s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0069s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0004s ]
+
+[ 2017-04-17T20:44:40+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0085s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年5月17日','123456','88888888','122') [ RunTime:0.0342s ]
+
+[ 2017-04-17T20:45:01+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000926s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0130s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='40.31174' WHERE ( childID='88888888'and importTime='2017年5月17日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='40.31174' WHERE ( childID='88888888'and importTime='2017年5月17日' )
+
+[ 2017-04-17T20:45:02+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0101s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年5月17日' ) [ RunTime:0.0511s ]
+
+[ 2017-04-17T20:45:45+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001322s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0187s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0093s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0087s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+
+[ 2017-04-17T20:53:51+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0169s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0090s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+
+[ 2017-04-17T20:54:09+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0183s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年5月18日','123456','88888888','154') [ RunTime:0.0421s ]
+
+[ 2017-04-17T20:54:22+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000973s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001160s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001267s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0030s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年5月18日' ) [ RunTime:0.0285s ]
+
+[ 2017-04-17T20:54:23+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0036s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='25.29938' WHERE ( childID='88888888'and importTime='2017年5月18日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='25.29938' WHERE ( childID='88888888'and importTime='2017年5月18日' )
+
+[ 2017-04-17T20:58:55+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001408s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0132s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0123s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0126s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+
+[ 2017-04-17T20:59:11+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0073s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年4月20日','123456','88888888','135.4') [ RunTime:0.0389s ]
+
+[ 2017-04-17T20:59:23+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0049s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年4月20日' ) [ RunTime:0.0394s ]
+
+[ 2017-04-17T20:59:24+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0412s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childWeight' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childWeight`='32.72758' WHERE ( childID='88888888'and importTime='2017年4月20日' )
+ERR: 1406:Data too long for column 'childWeight' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childWeight`='32.72758' WHERE ( childID='88888888'and importTime='2017年4月20日' )
+
+[ 2017-04-17T21:03:40+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0046s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0047s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0004s ]
+
+[ 2017-04-17T21:03:52+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001071s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0053s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年4月21日','123456','88888888','99.6') [ RunTime:0.0346s ]
+
+[ 2017-04-17T21:04:02+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0125s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年4月21日' ) [ RunTime:0.0362s ]
+
+[ 2017-04-17T21:04:03+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0127s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childWeight' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childWeight`='60.4829' WHERE ( childID='88888888'and importTime='2017年4月21日' )
+ERR: 1406:Data too long for column 'childWeight' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childWeight`='60.4829' WHERE ( childID='88888888'and importTime='2017年4月21日' )
+
+[ 2017-04-17T21:08:44+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001750s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0112s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0105s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0006s ]
+
+[ 2017-04-17T21:08:56+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001834s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0149s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年4月22日','123456','88888888','100.1') [ RunTime:0.0252s ]
+
+[ 2017-04-17T21:09:31+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0159s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年4月22日' ) [ RunTime:0.0289s ]
+
+[ 2017-04-17T21:10:10+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0089s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0075s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0006s ]
+
+[ 2017-04-17T21:10:57+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0373s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年3月17日','123456','88888888','100') [ RunTime:0.0398s ]
+
+[ 2017-04-17T21:19:57+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0143s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0090s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0006s ]
+
+[ 2017-04-17T21:20:11+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000793s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0114s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年2月17日','123456','88888888','118.5') [ RunTime:0.0359s ]
+
+[ 2017-04-17T21:20:19+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000932s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001209s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0037s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年2月17日' ) [ RunTime:0.0402s ]
+
+[ 2017-04-17T21:20:20+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000915s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001339s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0138s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childWeight' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childWeight`='42.7282' WHERE ( childID='88888888'and importTime='2017年2月17日' )
+ERR: 1406:Data too long for column 'childWeight' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childWeight`='42.7282' WHERE ( childID='88888888'and importTime='2017年2月17日' )
+
+[ 2017-04-17T21:21:01+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002102s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0139s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2017年1月17日','123456','88888888','100') [ RunTime:0.0304s ]
+
+[ 2017-04-17T21:21:13+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0148s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年1月17日' ) [ RunTime:0.0277s ]
+
+[ 2017-04-17T21:22:31+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001361s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0145s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0073s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0006s ]
+
+[ 2017-04-17T21:23:00+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0078s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2017年1月17日' ) [ RunTime:0.0323s ]
+
+[ 2017-04-17T21:23:16+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001205s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0364s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childBMI`='60' WHERE ( childID='88888888'and importTime='2017年1月17日' ) [ RunTime:0.0329s ]
+
+[ 2017-04-17T21:24:20+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = 'ef915029557d46f6bb0e812e74cb1a28' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0131s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='123456' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0100s ]
+SQL: SELECT `childHeight`,`childWeight`,`childHeadc`,`childBMI`,`importTime` FROM `ch_measure_data` WHERE ( userAccount='123456' )  [ RunTime:0.0005s ]
+
+[ 2017-04-17T21:27:20+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0187s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2016年3月17日','123456','88888888','100.5') [ RunTime:0.0289s ]
+
+[ 2017-04-17T21:27:27+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0080s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2016年3月17日' ) [ RunTime:0.0249s ]
+
+[ 2017-04-17T21:27:30+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0055s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='59.40447' WHERE ( childID='88888888'and importTime='2016年3月17日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='59.40447' WHERE ( childID='88888888'and importTime='2016年3月17日' )
+
+[ 2017-04-17T21:40:46+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000940s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001138s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001229s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0159s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childHeight`) VALUES ('2015年4月17日','123456','88888888','100.7') [ RunTime:0.0277s ]
+
+[ 2017-04-17T21:41:35+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0136s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `ch_measure_data` SET `childWeight`='60' WHERE ( childID='88888888'and importTime='2015年4月17日' ) [ RunTime:0.0365s ]
+
+[ 2017-04-17T21:41:36+08:00 ] 192.168.1.118 /childGrow/Mobile/dataEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000853s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0093s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='59.16874' WHERE ( childID='88888888'and importTime='2015年4月17日' )
+ERR: 1406:Data too long for column 'childBMI' at row 1
+ [ SQL语句 ] : UPDATE `ch_measure_data` SET `childBMI`='59.16874' WHERE ( childID='88888888'and importTime='2015年4月17日' )
+
