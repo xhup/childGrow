@@ -23,8 +23,17 @@ class MobileController extends Controller
 //            $childIcon=I("post.childIcon");
             $childBirthdate=I("post.childBirthdate");
             $childSex=I("post.childSex");
-            $table1=M("user");
-            $table2=M("childBaseInfo");
+            $birthCity=I("post.birthCity");
+            $bearingAge=I("post.bearingAge");
+            $fullMonth=I("post.fullMonth");
+            $fatherHeight=I("post.fatherHeight");
+            $motherHeight=I("post.motherHeight");
+            $birthHeight=I("post.birthHeight");
+            $birthWeight=I("post.birthWeight");
+            $birthHeadc=I("post.birthHeadc");
+            $table1=M("user");//用户信息表
+            $table2=M("childBaseInfo");//儿童信息表
+            $table3=M("measureData");//儿童数据表
             $check1=$table1->where("userAccount='$userAccount'")->find();
             if($check1){
                 $back=array("flag"=>2);//返回2表示注册账号已存在
@@ -42,12 +51,28 @@ class MobileController extends Controller
 //                $condition2["childIcon"]=$childIcon;
                 $condition2["childBirthdate"]=$childBirthdate;
                 $condition2["childSex"]=$childSex;
+                $condition2["birthCity"]=$birthCity;
+                $condition2["bearingAge"]=$bearingAge;
+                $condition2["fullMonth"]=$fullMonth;
+                $condition2["fatherHeight"]=$fatherHeight;
+                $condition2["motherHeight"]=$motherHeight;
                 $check2=$table2->where("childID='$childID'")->find();
+                //在儿童数据表中添加出生时的初始数据
+                $condition3["childID"]=$childID;
+                $condition3["userAccount"]=$userAccount;
+                $condition3["childHeight"]=$birthHeight;
+                $condition3["childWeight"]=$birthWeight;
+                $condition3["childHeadc"]=$birthHeadc;
+                $condition3["childBMI"]=$birthWeight/(($birthHeight/100)*($birthHeight/100));
+                $condition3["childBirthdate"]=$childBirthdate;
+                $condition3["importTime"]=$childBirthdate;
+                $condition3["childAge"]=1;
                 if($check2){
                     $back=array("flag"=>3);//返回3表示儿童账号已存在
                 }else{
+                    $result3=$table3->add($condition3);
                     $result2=$table2->add($condition2);
-                    if($result1&&$result2){
+                    if($result1&&$result2&&$result3){
                         $back=array("flag"=>1);//返回1表示注册成功
                     }else{
                         $back=array("flag"=>0);//返回0表示注册失败
@@ -72,7 +97,7 @@ class MobileController extends Controller
                 $token=md5($userAccount.$userPassword.$time.md5($salt));//返回给手机端的token，供之后使用
                 $_SESSION["currentLogin"]=$token;//服务器端将token存到session中供之后验证
                 $infoTable=M("childBaseInfo");
-                $infoQuery=$infoTable->where("userAccount='$userAccount'")->getField("childID,childIcon,childName,childBirthdate,childSex");//查询出该手机用户关联的儿童的信息
+                $infoQuery=$infoTable->where("userAccount='$userAccount'")->getField("childID,childIcon,childName,childBirthdate,childSex,birthCity,fatherHeight,motherHeight,fullMonth,bearingAge");//查询出该手机用户关联的儿童的信息
                 $dataTable=M("measureData");
                 $dataQuery=$dataTable->where("userAccount='$userAccount'")->getField("importTime,childID,childHeight,childWeight,childHeadc,childBMI");//查询出该手机用户关联的儿童账号的身高体重头围BMI信息
                 $back=array("flag"=>1,"token"=>$token,"info"=>$infoQuery,"data"=>$dataQuery);//返回1表示登录成功,token:后续访问令牌,info:儿童基本信息，data:身高体重头围BMI数据
@@ -236,9 +261,15 @@ class MobileController extends Controller
 //            $childIcon=I("post.childIcon");
             $childBirthdate=I("post.childBirthdate");
             $childSex=I("post.childSex");
-            $table=M("childBaseInfo");
+            $birthCity=I("post.birthCity");
+            $bearingAge=I("post.bearingAge");
+            $fullMonth=I("post.fullMonth");
+            $fatherHeight=I("post.fatherHeight");
+            $motherHeight=I("post.motherHeight");
+            $table1=M("childBaseInfo");
+            $table2=M("measureData");
             if($token==$_SESSION["currentLogin"]) {
-                $check = $table->where("childID='$childID'")->find();
+                $check = $table1->where("childID='$childID'")->find();
                 if ($check) {
                     $back = array("flag" => 2);//返回2表示新增的儿童ID已存在
                 } else {
@@ -249,8 +280,27 @@ class MobileController extends Controller
 //                $condition["childIcon"]=$childIcon;
                     $condition["childBirthdate"]=$childBirthdate;
                     $condition["childSex"]=$childSex;
-                    $result=$table->add($condition);
-                    if($result){
+                    $condition["birthCity"]=$birthCity;
+                    $condition["bearingAge"]=$bearingAge;
+                    $condition["fullMonth"]=$fullMonth;
+                    $condition["fatherHeight"]=$fatherHeight;
+                    $condition["motherHeight"]=$motherHeight;
+                    $birthHeight=I("post.birthHeight");
+                    $birthWeight=I("post.birthWeight");
+                    $birthHeadc=I("post.birthHeadc");
+                    //在儿童数据表中添加出生时的初始数据
+                    $condition2["childID"]=$childID;
+                    $condition2["userAccount"]=$userAccount;
+                    $condition2["childHeight"]=$birthHeight;
+                    $condition2["childWeight"]=$birthWeight;
+                    $condition2["childHeadc"]=$birthHeadc;
+                    $condition2["childBMI"]=$birthWeight/(($birthHeight/100)*($birthHeight/100));
+                    $condition2["childBirthdate"]=$childBirthdate;
+                    $condition2["importTime"]=$childBirthdate;
+                    $condition2["childAge"]=1;
+                    $result1=$table1->add($condition);
+                    $result2=$table2->add($condition2);
+                    if($result1&&$result2){
                         $back=array("flag"=>1);//返回1表示新增儿童ID成功
                     }else{
                         $back=array("flag"=>0);//返回0表示新增失败
