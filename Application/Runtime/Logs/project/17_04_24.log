@@ -3224,3 +3224,21 @@ INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
 SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0108s ]
 NOTIC: [8] Undefined index: currentLogin E:\xampp\htdocs\childGrow\Application\project\Controller\MobileController.class.php 第 240 行.
 
+[ 2017-04-24T21:07:14+08:00 ] ::1 /childGrow/mobile/childDataOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+NOTIC: [8] Undefined index: currentLogin E:\xampp\htdocs\childGrow\Application\project\Controller\MobileController.class.php 第 294 行.
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0075s ]
+SQL: SELECT `childAge`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( importTime='2017-04-17'and childID='88888888' )  [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ch_measure_data` WHERE ( (childAge-'2925' between -180 and 180) and childHeight > '85.6' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ch_measure_data` WHERE ( (childAge-'2925' between -180 and 180) and childWeight > '60' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ch_measure_data` WHERE ( (childAge-'2925' between -180 and 180) and childHeadc > '16' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ch_measure_data` WHERE ( (childAge-'2925' between -180 and 180) and childBMI > '8.5' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001501s ]
+

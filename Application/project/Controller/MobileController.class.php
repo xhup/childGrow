@@ -83,6 +83,63 @@ class MobileController extends Controller
             $this->ajaxReturn($back,"json");//将结果json形式返回给前端
          }
 
+    /*孕妇用户注册后台*/
+         public function pregRegister(){
+            $userAccount=I("post.userAccount");
+            $userPassword=I("post.userPassword");
+            $userName=I("post.userName");
+//          $Icon=I("post.icon");
+            $pregnantTime=I("post.pregnantTime");
+            $expectedChildbirth=I("post.expectedChildbirth");
+            $fatherHeight=I("post.fatherHeight");
+            $motherHeight=I("post.motherHeight");
+            $sex=I("post.sex");
+            $birthdate=I("post.birthdate");
+            $birthHeight=I("post.birthHeight");
+            $birthWeight=I("post.birthWeight");
+            $birthHeadc=I("post.birthHeadc");
+            $normalWeight=I("post.normalWeight");
+            $table1=M("user");//用户信息表
+            $table2=M("pregBaseInfo");//孕妇信息表
+            $check1=$table1->where("userAccount='$userAccount'")->find();
+            if($check1){
+                $back=array("flag"=>2);//返回2表示注册账号已存在
+            }else{
+                //建立用户基本信息
+                $condition1["userAccount"]=$userAccount;
+                $condition1["userPassword"]=md5(md5($userPassword));
+                $condition1["userName"]=$userName;
+//                $condition1["userIcon"]=$userIcon;
+                $result1=$table1->add($condition1);
+                //建立孕妇的基本信息
+                $condition2["name"]=$name;
+                $condition2["pregnantTime"]=$pregnantTime;
+                $condition2["expectedChildbirth"]=$expectedChildbirth;
+                $condition2["fatherHeight"]=$fatherHeight;
+//                $condition2["icon"]=$icon;
+                $condition2["motherHeight"]=$motherHeight;
+                $condition2["sex"]=$sex;
+                $condition2["birthdate"]=$birthdate;
+                $condition2["birthHeight"]=$birthHeight;
+                $condition2["birthWeight"]=$birthWeight;
+                $condition2["birthHeadc"]=$birthHeadc;
+                $condition2["normalWeight"]=$normalWeight;
+
+                $check2=$table2->where("userAccount='$userAccount'")->find();
+               if($check2){
+                    $back=array("flag"=>3);//返回3表示孕妇信息已存在
+                }else{
+                     $result2=$table2->add($condition2);
+                    if($result1&&$result2){
+                        $back=array("flag"=>1);//返回1表示注册成功
+                      }else{
+                        $back=array("flag"=>0);//返回0表示注册失败
+                    }
+                }
+            }
+             $this->ajaxReturn($back,"json");//将结果json形式返回给前端
+        }
+
     /*手机端用户登陆后台*/
         public function login(){
             $userAccount=I("post.userAccount");
@@ -350,11 +407,15 @@ class MobileController extends Controller
                    $choiceWeight=$latestData[$childAge]['childweight'];
                    $choiceHeadc=$latestData[$childAge]['childheadc'];
                    $choiceBMI=$latestData[$childAge]['childbmi'];
+
+                   $allSuitChild=$table->where("childAge-'$childAge' between -180 and 180")->count();//适龄儿童总数
+
                    $resultHeight=$table->where("(childAge-'$childAge' between -180 and 180) and childHeight > '$choiceHeight'")->count();//数据的排名
                    $resultWeight=$table->where("(childAge-'$childAge' between -180 and 180) and childWeight > '$choiceWeight'")->count();
                    $resultHeadc=$table->where("(childAge-'$childAge' between -180 and 180) and childHeadc > '$choiceHeadc'")->count();
                    $resultBMI=$table->where("(childAge-'$childAge' between -180 and 180) and childBMI > '$choiceBMI'")->count();
-                   $back=array("flag"=>1,"heightRand"=>$resultHeight+1,"weightRand"=>$resultWeight+1,"headcRand"=>$resultHeadc+1,"bmiRand"=>$resultBMI+1);
+
+                   $back=array("flag"=>1,"heightRand"=>($allSuitChild-($resultHeight+1))/$allSuitChild,"weightRand"=>($allSuitChild-($resultWeight+1))/$allSuitChild,"headcRand"=>($allSuitChild-($resultHeadc+1))/$allSuitChild,"bmiRand"=>($allSuitChild-($resultBMI+1))/$allSuitChild);
 //                     $back=array("flag"=>1,"data"=>$latestData[$childAge]['childheight']);
                }else{
                    $back=array("flag"=>2);//返回2表示收到的儿童ID或者出生日期存在空值
@@ -362,7 +423,7 @@ class MobileController extends Controller
            }else{
                $back=array("flag"=>4);//返回4表示token不正确或者过期，需要客户端重新登录
            }
-           var_dump($back) ;
+           $this->ajaxReturn($back,"json");
        }
     /*时间中的年月替换为-*/
     private function timeReplace(){

@@ -1,0 +1,28 @@
+[ 2017-05-15T19:23:18+08:00 ] 192.168.1.107 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011099s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '55555' AND `userPassword` = '2952e1846b4ea765dfd0fdfcb7e21097' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0074s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='55555' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0052s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='55555' )  [ RunTime:0.0003s ]
+
+[ 2017-05-15T19:49:12+08:00 ] 192.168.1.107 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002864s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0152s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '55555' AND `userPassword` = '2952e1846b4ea765dfd0fdfcb7e21097' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0177s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex`,`birthCity`,`fatherHeight`,`motherHeight`,`fullMonth`,`bearingAge` FROM `ch_child_base_info` WHERE ( userAccount='55555' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0070s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='55555' )  [ RunTime:0.0004s ]
+

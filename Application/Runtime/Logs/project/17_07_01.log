@@ -1,0 +1,22 @@
+[ 2017-07-01T10:40:43+08:00 ] 192.168.1.155 /childGrow/Mobile/deleteChildID
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004648s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0218s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0078s ]
+NOTIC: [8] Undefined index: currentLogin E:\xampp\htdocs\childGrow\Application\project\Controller\MobileController.class.php 第 321 行.
+
+[ 2017-07-01T10:41:30+08:00 ] 192.168.1.155 /childGrow/Mobile/deleteChildID
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0105s ]
+NOTIC: [8] Undefined index: currentLogin E:\xampp\htdocs\childGrow\Application\project\Controller\MobileController.class.php 第 321 行.
+

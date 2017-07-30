@@ -1,0 +1,20 @@
+[ 2017-05-11T10:28:18+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012046s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0189s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '000000' AND `userPassword` = '2c7a5a6bfa4b5baee3b981b7803c3747' LIMIT 1   [ RunTime:0.0190s ]
+
+[ 2017-05-11T10:29:39+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '123456' AND `userPassword` = '2c7a5a6bfa4b5baee3b981b7803c3747' LIMIT 1   [ RunTime:0.0245s ]
+

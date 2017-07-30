@@ -1,0 +1,162 @@
+[ 2017-04-26T14:54:16+08:00 ] 192.168.1.118 /childGrow/Mobile/deleteChildID
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001247s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0188s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0116s ]
+NOTIC: [8] Undefined index: currentLogin E:\xampp\htdocs\childGrow\Application\project\Controller\MobileController.class.php 第 271 行.
+
+[ 2017-04-26T14:55:18+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001739s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '00000' AND `userPassword` = 'c97cccbc3080944fc4b312467034fc84' LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0074s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='00000' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0061s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='00000' )  [ RunTime:0.0007s ]
+
+[ 2017-04-26T14:55:29+08:00 ] 192.168.1.118 /childGrow/Mobile/deleteChildID
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001711s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0110s ]
+SQL: DELETE FROM `ch_child_base_info` WHERE ( childID='0000000' ) [ RunTime:0.0325s ]
+NOTIC: [2] Illegal offset type in isset or empty E:\xampp\htdocs\childGrow\ThinkPHP\Library\Think\Model.class.php 第 511 行.
+SQL: DELETE FROM `ch_measure_data` WHERE ( childID='0000000' ) [ RunTime:0.0223s ]
+
+[ 2017-04-26T14:56:56+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002014s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0421s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '00000' AND `userPassword` = 'c97cccbc3080944fc4b312467034fc84' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0124s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='00000' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0142s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='00000' )  [ RunTime:0.0012s ]
+
+[ 2017-04-26T16:40:48+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '00000' AND `userPassword` = 'c97cccbc3080944fc4b312467034fc84' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0132s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='00000' )  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0138s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='00000' )  [ RunTime:0.0006s ]
+
+[ 2017-04-26T16:41:41+08:00 ] 192.168.1.118 /childGrow/Mobile/addChildID
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001220s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `ch_child_base_info` WHERE ( childID='0000000' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ch_child_base_info` (`userAccount`,`childID`,`childName`,`childBirthdate`,`childSex`) VALUES ('00000','0000000','儿童二','2010-04-26','男') [ RunTime:0.0337s ]
+
+[ 2017-04-26T16:43:38+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '00000' AND `userPassword` = 'c97cccbc3080944fc4b312467034fc84' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0104s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='00000' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0053s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='00000' )  [ RunTime:0.0004s ]
+
+[ 2017-04-26T16:44:16+08:00 ] 192.168.1.118 /childGrow/Mobile/addChildID
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `ch_child_base_info` WHERE ( childID='00000000' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `ch_child_base_info` (`userAccount`,`childID`,`childName`,`childBirthdate`,`childSex`) VALUES ('00000','00000000','儿童三','2009-01-26','女') [ RunTime:0.0470s ]
+
+[ 2017-04-26T16:45:38+08:00 ] 192.168.1.118 /childGrow/Mobile/addChildID
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002664s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: currentLogin E:\xampp\htdocs\childGrow\Application\project\Controller\MobileController.class.php 第 240 行.
+
+[ 2017-04-26T16:48:54+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002031s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '00000' AND `userPassword` = 'c97cccbc3080944fc4b312467034fc84' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0037s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='00000' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0047s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='00000' )  [ RunTime:0.0007s ]
+
+[ 2017-04-26T16:49:23+08:00 ] 192.168.1.118 /childGrow/Mobile/addChildID
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `ch_child_base_info` WHERE ( childID='000000000' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: INSERT INTO `ch_child_base_info` (`userAccount`,`childID`,`childName`,`childBirthdate`,`childSex`) VALUES ('00000','000000000','儿童四','2010-04-26','男') [ RunTime:0.0463s ]
+
+[ 2017-04-26T16:52:46+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000955s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001461s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '00000' AND `userPassword` = 'c97cccbc3080944fc4b312467034fc84' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0083s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='00000' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0056s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='00000' )  [ RunTime:0.0010s ]
+
+[ 2017-04-26T16:53:28+08:00 ] 192.168.1.118 /childGrow/Mobile/addChildID
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `ch_child_base_info` WHERE ( childID='000000001' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `ch_child_base_info` (`userAccount`,`childID`,`childName`,`childBirthdate`,`childSex`) VALUES ('00000','000000001','儿童五','2014-04-26','男') [ RunTime:0.0295s ]
+

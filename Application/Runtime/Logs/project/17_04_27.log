@@ -1,0 +1,14 @@
+[ 2017-04-27T16:29:06+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0205s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '00000' AND `userPassword` = 'c97cccbc3080944fc4b312467034fc84' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0107s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='00000' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0078s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='00000' )  [ RunTime:0.0006s ]
+

@@ -1,0 +1,68 @@
+[ 2017-04-25T15:09:53+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001413s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0186s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '00000' AND `userPassword` = 'c97cccbc3080944fc4b312467034fc84' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0073s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='00000' )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0082s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='00000' )  [ RunTime:0.0009s ]
+
+[ 2017-04-25T15:11:35+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002206s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0079s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childBirthdate`,`childAge`,`childHeight`) VALUES ('2008-04-24','00000','0000000','2007-04-24','365','79.9') [ RunTime:0.0389s ]
+
+[ 2017-04-25T15:12:00+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0086s ]
+SQL: INSERT INTO `ch_measure_data` (`importTime`,`userAccount`,`childID`,`childBirthdate`,`childAge`,`childHeight`) VALUES ('2009-04-23','00000','0000000','2007-04-24','729','99.7') [ RunTime:0.0526s ]
+
+[ 2017-04-25T16:12:57+08:00 ] 192.168.1.163 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '00000' AND `userPassword` = 'c97cccbc3080944fc4b312467034fc84' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0206s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='00000' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0068s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='00000' )  [ RunTime:0.0005s ]
+
+[ 2017-04-25T20:25:43+08:00 ] 192.168.1.118 /childGrow/Mobile/dataAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000897s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001231s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: currentLogin E:\xampp\htdocs\childGrow\Application\project\Controller\MobileController.class.php 第 101 行.
+
+[ 2017-04-25T20:26:10+08:00 ] 192.168.1.118 /childGrow/Mobile/dataDelete
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0166s ]
+NOTIC: [8] Undefined index: currentLogin E:\xampp\htdocs\childGrow\Application\project\Controller\MobileController.class.php 第 188 行.
+

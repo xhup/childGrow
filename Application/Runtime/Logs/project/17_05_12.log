@@ -1,0 +1,118 @@
+[ 2017-05-12T14:40:52+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001828s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008384s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '777777' AND `userPassword` = '860382dcd8911b0a412b715f7db5905d' LIMIT 1   [ RunTime:0.0153s ]
+
+[ 2017-05-12T14:43:41+08:00 ] 192.168.1.118 /childGrow/Mobile/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0216s ]
+SQL: SELECT * FROM `ch_user` WHERE ( userAccount='55555' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `ch_user` (`userAccount`,`userPassword`,`userName`) VALUES ('55555','2952e1846b4ea765dfd0fdfcb7e21097','Rrr ') [ RunTime:0.0633s ]
+SQL: SELECT * FROM `ch_child_base_info` WHERE ( childID='55555' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ch_child_base_info` (`userAccount`,`childID`,`childName`,`childBirthdate`,`childSex`,`birthCity`,`fullMonth`,`fatherHeight`,`motherHeight`) VALUES ('55555','55555','Hhf电饭锅','2012-05-12','男','浙江省-衢州市-柯城区','34','178','164') [ RunTime:0.0317s ]
+
+[ 2017-05-12T14:45:09+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001836s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '55555' AND `userPassword` = '2952e1846b4ea765dfd0fdfcb7e21097' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0101s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='55555' )  [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0110s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='55555' )  [ RunTime:0.0009s ]
+
+[ 2017-05-12T15:19:16+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '55555' AND `userPassword` = '2952e1846b4ea765dfd0fdfcb7e21097' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0123s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='55555' )  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0126s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='55555' )  [ RunTime:0.0009s ]
+
+[ 2017-05-12T15:19:36+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '55555' AND `userPassword` = '2952e1846b4ea765dfd0fdfcb7e21097' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0078s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='55555' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0048s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='55555' )  [ RunTime:0.0003s ]
+
+[ 2017-05-12T15:22:12+08:00 ] 192.168.1.118 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0146s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '55555' AND `userPassword` = '2952e1846b4ea765dfd0fdfcb7e21097' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0094s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='55555' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0094s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='55555' )  [ RunTime:0.0006s ]
+
+[ 2017-05-12T15:46:14+08:00 ] 192.168.1.163 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '55555' AND `userPassword` = 'acddcd1be50e65459940b991c4480e9a' LIMIT 1   [ RunTime:0.0012s ]
+
+[ 2017-05-12T15:46:31+08:00 ] 192.168.1.163 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0145s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '55555' AND `userPassword` = '2952e1846b4ea765dfd0fdfcb7e21097' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0102s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='55555' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0064s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='55555' )  [ RunTime:0.0006s ]
+
+[ 2017-05-12T16:04:38+08:00 ] 192.168.1.163 /childGrow/Mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001061s ]
+SQL: SHOW COLUMNS FROM `ch_user` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `ch_user` WHERE `userAccount` = '55555' AND `userPassword` = '2952e1846b4ea765dfd0fdfcb7e21097' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ch_child_base_info` [ RunTime:0.0138s ]
+SQL: SELECT `childID`,`childIcon`,`childName`,`childBirthdate`,`childSex` FROM `ch_child_base_info` WHERE ( userAccount='55555' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ch_measure_data` [ RunTime:0.0137s ]
+SQL: SELECT `importTime`,`childID`,`childHeight`,`childWeight`,`childHeadc`,`childBMI` FROM `ch_measure_data` WHERE ( userAccount='55555' )  [ RunTime:0.0009s ]
+
