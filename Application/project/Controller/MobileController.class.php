@@ -11,7 +11,7 @@ use Think\Controller;
 
 class MobileController extends Controller
 {
-    /*æ‰‹æœºç«¯ç”¨æˆ·æ³¨å†Œåå°*/
+    /*ÊÖ»ú¶ËÓÃ»§×¢²áºóÌ¨*/
         public function register()
         {
             $userAccount=I("post.userAccount");
@@ -31,20 +31,20 @@ class MobileController extends Controller
             $birthHeight=I("post.birthHeight");
             $birthWeight=I("post.birthWeight");
             $birthHeadc=I("post.birthHeadc");
-            $table1=M("user");//ç”¨æˆ·ä¿¡æ¯è¡¨
-            $table2=M("childBaseInfo");//å„¿ç«¥ä¿¡æ¯è¡¨
-            $table3=M("measureData");//å„¿ç«¥æ•°æ®è¡¨
+            $table1=M("user");//ÓÃ»§ĞÅÏ¢±í
+            $table2=M("childBaseInfo");//¶ùÍ¯ĞÅÏ¢±í
+            $table3=M("measureData");//¶ùÍ¯Êı¾İ±í
             $check1=$table1->where("userAccount='$userAccount'")->find();
             if($check1){
-                $back=array("flag"=>2);//è¿”å›2è¡¨ç¤ºæ³¨å†Œè´¦å·å·²å­˜åœ¨
+                $back=array("flag"=>2);//·µ»Ø2±íÊ¾×¢²áÕËºÅÒÑ´æÔÚ
             }else{
-                //å»ºç«‹ç”¨æˆ·åŸºæœ¬ä¿¡æ¯
+                //½¨Á¢ÓÃ»§»ù±¾ĞÅÏ¢
                 $condition1["userAccount"]=$userAccount;
                 $condition1["userPassword"]=md5(md5($userPassword));
                 $condition1["userName"]=$userName;
 //                $condition1["userIcon"]=$userIcon;
                 $result1=$table1->add($condition1);
-                //å»ºç«‹é»˜è®¤å„¿ç«¥çš„åŸºæœ¬ä¿¡æ¯
+                //½¨Á¢Ä¬ÈÏ¶ùÍ¯µÄ»ù±¾ĞÅÏ¢
                 $condition2["userAccount"]=$userAccount;
                 $condition2["childID"]=$childID;
                 $condition2["childName"]=$childName;
@@ -57,7 +57,7 @@ class MobileController extends Controller
                 $condition2["fatherHeight"]=$fatherHeight;
                 $condition2["motherHeight"]=$motherHeight;
                 $check2=$table2->where("childID='$childID'")->find();
-                //åœ¨å„¿ç«¥æ•°æ®è¡¨ä¸­æ·»åŠ å‡ºç”Ÿæ—¶çš„åˆå§‹æ•°æ®
+                //ÔÚ¶ùÍ¯Êı¾İ±íÖĞÌí¼Ó³öÉúÊ±µÄ³õÊ¼Êı¾İ
                 $condition3["childID"]=$childID;
                 $condition3["userAccount"]=$userAccount;
                 $condition3["childHeight"]=$birthHeight;
@@ -68,79 +68,71 @@ class MobileController extends Controller
                 $condition3["importTime"]=$childBirthdate;
                 $condition3["childAge"]=1;
                 if($check2){
-                    $back=array("flag"=>3);//è¿”å›3è¡¨ç¤ºå„¿ç«¥è´¦å·å·²å­˜åœ¨
+                    $back=array("flag"=>3);//·µ»Ø3±íÊ¾¶ùÍ¯ÕËºÅÒÑ´æÔÚ
                 }else{
                     $result3=$table3->add($condition3);
                     $result2=$table2->add($condition2);
                     if($result1&&$result2&&$result3){
-                        $back=array("flag"=>1);//è¿”å›1è¡¨ç¤ºæ³¨å†ŒæˆåŠŸ
+                        $back=array("flag"=>1);//·µ»Ø1±íÊ¾×¢²á³É¹¦
                     }else{
-                        $back=array("flag"=>0);//è¿”å›0è¡¨ç¤ºæ³¨å†Œå¤±è´¥
+                        $back=array("flag"=>0);//·µ»Ø0±íÊ¾×¢²áÊ§°Ü
                     }
                 }
 
             }
-            $this->ajaxReturn($back,"json");//å°†ç»“æœjsonå½¢å¼è¿”å›ç»™å‰ç«¯
+            $this->ajaxReturn($back,"json");//½«½á¹ûjsonĞÎÊ½·µ»Ø¸øÇ°¶Ë
          }
 
-    /*å­•å¦‡ç”¨æˆ·æ³¨å†Œåå°*/
+    /*ÔĞ¸¾ÓÃ»§×¢²áºóÌ¨*/
          public function pregRegister(){
             $userAccount=I("post.userAccount");
             $userPassword=I("post.userPassword");
             $userName=I("post.userName");
 //          $Icon=I("post.icon");
+            $name=I("post.name");
             $pregnantTime=I("post.pregnantTime");
             $expectedChildbirth=I("post.expectedChildbirth");
             $fatherHeight=I("post.fatherHeight");
             $motherHeight=I("post.motherHeight");
-            $sex=I("post.sex");
-            $birthdate=I("post.birthdate");
-            $birthHeight=I("post.birthHeight");
-            $birthWeight=I("post.birthWeight");
-            $birthHeadc=I("post.birthHeadc");
             $normalWeight=I("post.normalWeight");
-            $table1=M("user");//ç”¨æˆ·ä¿¡æ¯è¡¨
-            $table2=M("pregBaseInfo");//å­•å¦‡ä¿¡æ¯è¡¨
+            $table1=M("user");//ÓÃ»§ĞÅÏ¢±í
+            $table2=M("pregBaseInfo");//ÔĞ¸¾ĞÅÏ¢±í
             $check1=$table1->where("userAccount='$userAccount'")->find();
             if($check1){
-                $back=array("flag"=>2);//è¿”å›2è¡¨ç¤ºæ³¨å†Œè´¦å·å·²å­˜åœ¨
+                $back=array("flag"=>2);//·µ»Ø2±íÊ¾×¢²áÕËºÅÒÑ´æÔÚ
             }else{
-                //å»ºç«‹ç”¨æˆ·åŸºæœ¬ä¿¡æ¯
+                //½¨Á¢ÓÃ»§»ù±¾ĞÅÏ¢
                 $condition1["userAccount"]=$userAccount;
                 $condition1["userPassword"]=md5(md5($userPassword));
                 $condition1["userName"]=$userName;
 //                $condition1["userIcon"]=$userIcon;
                 $result1=$table1->add($condition1);
-                //å»ºç«‹å­•å¦‡çš„åŸºæœ¬ä¿¡æ¯
+                //½¨Á¢ÔĞ¸¾µÄ»ù±¾ĞÅÏ¢
+                $condition2["userAccount"]=$userAccount;
                 $condition2["name"]=$name;
                 $condition2["pregnantTime"]=$pregnantTime;
                 $condition2["expectedChildbirth"]=$expectedChildbirth;
                 $condition2["fatherHeight"]=$fatherHeight;
 //                $condition2["icon"]=$icon;
                 $condition2["motherHeight"]=$motherHeight;
-                $condition2["sex"]=$sex;
-                $condition2["birthdate"]=$birthdate;
-                $condition2["birthHeight"]=$birthHeight;
-                $condition2["birthWeight"]=$birthWeight;
-                $condition2["birthHeadc"]=$birthHeadc;
                 $condition2["normalWeight"]=$normalWeight;
 
                 $check2=$table2->where("userAccount='$userAccount'")->find();
                if($check2){
-                    $back=array("flag"=>3);//è¿”å›3è¡¨ç¤ºå­•å¦‡ä¿¡æ¯å·²å­˜åœ¨
+                    $back=array("flag"=>3);//·µ»Ø3±íÊ¾ÔĞ¸¾ĞÅÏ¢ÒÑ´æÔÚ
                 }else{
                      $result2=$table2->add($condition2);
                     if($result1&&$result2){
-                        $back=array("flag"=>1);//è¿”å›1è¡¨ç¤ºæ³¨å†ŒæˆåŠŸ
+                        $back=array("flag"=>1);//·µ»Ø1±íÊ¾×¢²á³É¹¦
                       }else{
-                        $back=array("flag"=>0);//è¿”å›0è¡¨ç¤ºæ³¨å†Œå¤±è´¥
+                        $back=array("flag"=>0);//·µ»Ø0±íÊ¾×¢²áÊ§°Ü
                     }
                 }
             }
-             $this->ajaxReturn($back,"json");//å°†ç»“æœjsonå½¢å¼è¿”å›ç»™å‰ç«¯
+             $this->ajaxReturn($back,"json");//½«½á¹ûjsonĞÎÊ½·µ»Ø¸øÇ°¶Ë
         }
 
-    /*æ‰‹æœºç«¯ç”¨æˆ·ç™»é™†åå°*/
+    /*ÊÖ»ú¶ËÓÃ»§µÇÂ½ºóÌ¨*/
         public function login(){
             $userAccount=I("post.userAccount");
             $userPassword=I("post.userPassword");
@@ -148,26 +140,32 @@ class MobileController extends Controller
             $condition["userAccount"]=$userAccount;
             $condition["userPassword"]=md5(md5($userPassword));
             $check=$table->where($condition)->find();
-            $time=date('y-m-d h:i:s',time());//è·å–å½“å‰æ—¶é—´
-            $salt="qazwsx";//tokençš„åŠ ç›ä¿æŠ¤
+            $time=date('y-m-d h:i:s',time());//»ñÈ¡µ±Ç°Ê±¼ä
+            $salt="qazwsx";//tokenµÄ¼ÓÑÎ±£»¤
             if($check){
-                $token=md5($userAccount.$userPassword.$time.md5($salt));//è¿”å›ç»™æ‰‹æœºç«¯çš„tokenï¼Œä¾›ä¹‹åä½¿ç”¨
-                $_SESSION["currentLogin"]=$token;//æœåŠ¡å™¨ç«¯å°†tokenå­˜åˆ°sessionä¸­ä¾›ä¹‹åéªŒè¯
-                $infoTable=M("childBaseInfo");
-                $infoQuery=$infoTable->where("userAccount='$userAccount'")->getField("childID,childIcon,childName,childBirthdate,childSex,birthCity,fatherHeight,motherHeight,fullMonth,bearingAge");//æŸ¥è¯¢å‡ºè¯¥æ‰‹æœºç”¨æˆ·å…³è”çš„å„¿ç«¥çš„ä¿¡æ¯
-                $dataTable=M("measureData");
-                $dataQuery=$dataTable->where("userAccount='$userAccount'")->getField("importTime,childID,childHeight,childWeight,childHeadc,childBMI");//æŸ¥è¯¢å‡ºè¯¥æ‰‹æœºç”¨æˆ·å…³è”çš„å„¿ç«¥è´¦å·çš„èº«é«˜ä½“é‡å¤´å›´BMIä¿¡æ¯
-                $back=array("flag"=>1,"token"=>$token,"info"=>$infoQuery,"data"=>$dataQuery);//è¿”å›1è¡¨ç¤ºç™»å½•æˆåŠŸ,token:åç»­è®¿é—®ä»¤ç‰Œ,info:å„¿ç«¥åŸºæœ¬ä¿¡æ¯ï¼Œdata:èº«é«˜ä½“é‡å¤´å›´BMIæ•°æ®
+                $token=md5($userAccount.$userPassword.$time.md5($salt));//·µ»Ø¸øÊÖ»ú¶ËµÄtoken£¬¹©Ö®ºóÊ¹ÓÃ
+                $_SESSION["currentLogin"]=$token;//·şÎñÆ÷¶Ë½«token´æµ½sessionÖĞ¹©Ö®ºóÑéÖ¤
+                $infoTable1=M("childBaseInfo");
+                $infoQuery1=$infoTable1->where("userAccount='$userAccount'")->getField("childID,childIcon,childName,childBirthdate,childSex,birthCity,fatherHeight,motherHeight,fullMonth,bearingAge");//²éÑ¯³ö¸ÃÊÖ»úÓÃ»§¹ØÁªµÄ¶ùÍ¯µÄĞÅÏ¢
+                $dataTable1=M("measureData");
+                $dataQuery1=$dataTable1->where("userAccount='$userAccount'")->getField("importTime,childID,childHeight,childWeight,childHeadc,childBMI");//²éÑ¯³ö¸ÃÊÖ»úÓÃ»§¹ØÁªµÄ¶ùÍ¯ÕËºÅµÄÉí¸ßÌåÖØÍ·Î§BMIĞÅÏ¢
+                $infoTable2=M("pregBaseInfo");
+                $infoQuery2=$infoTable2->where("userAccount='$userAccount'")->getField("name,pregnantTime,expectedChildbirth,fatherHeight,motherHeight,sex,birthdate,birthHeight,birthWeight,birthHeadc,normalWeight,icon");//²éÑ¯³ö¸ÃÊÖ»úÓÃ»§¹ØÁªµÄÔĞ¸¾µÄĞÅÏ¢
+                $dataTable2=M("pregWeight");
+                $dataQuery2=$dataTable2->where("userAccount='$userAccount'")->getField("time,weight");//²éÑ¯³ö¸ÃÊÖ»úÓÃ»§¹ØÁªµÄÔĞ¸¾µÄÌåÖØ²âÁ¿ĞÅÏ¢
+                $dataTable3=M("bmodeData");
+                $dataQuery3=$dataTable3->where("userAccount='$userAccount'")->getField("time,crl,hc,bpd,ac,fl,ofd,wg");//²éÑ¯³ö¸ÃÊÖ»úÓÃ»§¹ØÁªµÄÔĞ¸¾µÄÆäËûÖ¸±êµÄ²âÁ¿ĞÅÏ¢
+                $back=array("flag"=>1,"token"=>$token,"childInfo"=>$infoQuery1,"childData"=>$dataQuery1,"pregInfo"=>$infoQuery2,"pregWeightData"=>$dataQuery2,"pregBmodeData"=>$dataQuery3);//·µ»Ø1±íÊ¾µÇÂ¼³É¹¦,token:ºóĞø·ÃÎÊÁîÅÆ
             }else{
-                $back=array("flag"=>0);//è¿”å›0è¡¨ç¤ºç”¨æˆ·åæˆ–å¯†ç é”™è¯¯
+                $back=array("flag"=>0);//·µ»Ø0±íÊ¾ÓÃ»§Ãû»òÃÜÂë´íÎó
             }
             $this->ajaxReturn($back,"json");
         }
 
-        /*æ‰‹æœºç«¯èº«é«˜ã€ä½“é‡ã€å¤´å›´ã€BMIçš„æ·»åŠ åå°*/
+        /*ÊÖ»ú¶ËÉí¸ß¡¢ÌåÖØ¡¢Í·Î§¡¢BMIµÄÌí¼ÓºóÌ¨*/
         public function dataAdd(){
-            $token=I("post.token");//è·å–èº«ä»½ä»¤ç‰Œ
-            $parm=I("post.parm");//å‚æ•°åˆ¤æ–­
+            $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+            $parm=I("post.parm");//²ÎÊıÅĞ¶Ï
             $data=I("post.data");
             $userAccount=I("post.userAccount");
             $childID=I("post.childID");
@@ -175,13 +173,13 @@ class MobileController extends Controller
             $childBirthdate=I("post.childBirthdate");
 //            $time=date("Y-m-d",time());
             $table=M("measureData");
-            $condition["importTime"]=$importTime;//ä¸Šä¼ æ•°æ®çš„æ—¥æœŸ
-            $condition["userAccount"]=$userAccount;//ç”¨æˆ·è´¦å·
-            $condition["childID"]=$childID;//å¯¹åº”çš„å„¿ç«¥ID
-            $condition["childBirthdate"]=$childBirthdate;//å¯¹åº”çš„å„¿ç«¥çš„å‡ºç”Ÿæ—¥æœŸï¼Œåç»­åŒå¹´é¾„æ®µæ•°æ®æ’åºè¦ç”¨
-            $condition["childAge"]=$this->timeInterval($childBirthdate,$importTime);//å¯¹åº”çš„å„¿ç«¥çš„å¹´é¾„ï¼Œä»¥å¤©ä¸ºå•ä½
+            $condition["importTime"]=$importTime;//ÉÏ´«Êı¾İµÄÈÕÆÚ
+            $condition["userAccount"]=$userAccount;//ÓÃ»§ÕËºÅ
+            $condition["childID"]=$childID;//¶ÔÓ¦µÄ¶ùÍ¯ID
+            $condition["childBirthdate"]=$childBirthdate;//¶ÔÓ¦µÄ¶ùÍ¯µÄ³öÉúÈÕÆÚ£¬ºóĞøÍ¬ÄêÁä¶ÎÊı¾İÅÅĞòÒªÓÃ
+            $condition["childAge"]=$this->timeInterval($childBirthdate,$importTime);//¶ÔÓ¦µÄ¶ùÍ¯µÄÄêÁä£¬ÒÔÌìÎªµ¥Î»
             if($token==$_SESSION["currentLogin"]){
-                if($parm&&$data&&$userAccount&&$childID&&$importTime&&$childBirthdate){
+                if(isset($parm)&&isset($data)&&isset($userAccount)&&isset($childID)&&isset($importTime)&&isset($childBirthdate)){
                     switch($parm){
                         case "height":{
                             $condition["childHeight"]=$data;
@@ -200,24 +198,94 @@ class MobileController extends Controller
                             break;
                         }
                     };
-                    $result=$table->add($condition);//å°†æ‰‹æœºç«¯ç”¨æˆ·éœ€è¦æ·»åŠ çš„æ•°æ®å­˜å…¥æ•°æ®åº“
+                    $result=$table->add($condition);//½«ÊÖ»ú¶ËÓÃ»§ĞèÒªÌí¼ÓµÄÊı¾İ´æÈëÊı¾İ¿â
                     if($result){
-                        $back=array("flag"=>1);//è¿”å›1è¡¨ç¤ºæ·»åŠ æˆåŠŸ
+                        $back=array("flag"=>1);//·µ»Ø1±íÊ¾Ìí¼Ó³É¹¦
                     }else{
-                        $back=array("flag"=>0);//è¿”å›0è¡¨ç¤ºæ·»åŠ å¤±è´¥
+                        $back=array("flag"=>0);//·µ»Ø0±íÊ¾Ìí¼ÓÊ§°Ü
                     }
                 }else{
-                    $back=array("flag"=>2);//è¿”å›0è¡¨ç¤ºæ¥å—åˆ°ç”¨æˆ·æ•°æ®æœ‰ç©ºå€¼
+                    $back=array("flag"=>2);//·µ»Ø0±íÊ¾½ÓÊÜµ½ÓÃ»§Êı¾İÓĞ¿ÕÖµ
                 }
             }else{
-                $back=array("flag"=>4);//è¿”å›4è¡¨ç¤ºtokenä¸æ­£ç¡®æˆ–è€…è¿‡æœŸï¼Œéœ€è¦å®¢æˆ·ç«¯é‡æ–°ç™»å½•
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
             }
             $this->ajaxReturn($back, "json");
         }
 
-    /*æ‰‹æœºç«¯èº«é«˜ã€ä½“é‡ã€å¤´å›´ã€BMIçš„ä¿®æ”¹åå°*/
+    /*ÊÖ»ú¶ËÔĞ¸¾B³¬²âÁ¿Êı¾İµÄÌí¼ÓºóÌ¨*/
+    public function BmodeDataAdd(){
+        $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+        $userAccount=I("post.userAccount");//²ÎÊıÅĞ¶Ï
+        $time=I("post.time");
+        $crl=I("post.crl");
+        $hc=I("post.hc");
+        $bpd=I("post.bpd");
+        $ac=I("post.ac");
+        $fl=I("post.fl");
+        $ofd=I("post.ofd");
+        $wg=I("post.wg");
+        $table=M("bmodeData");
+        if($token==$_SESSION["currentLogin"]){
+           $check = $table->where("userAccount='$userAccount' and time='$time'")->find();
+           if($check){
+             $back=array("flag"=>2);//·µ»Ø2±íÊ¾¸ÃÈÕµÄÊı¾İÒÑ¾­´æÔÚ£¬²»ÄÜÖØ¸´Ìí¼Ó
+           }else{
+             $condition["userAccount"]=$userAccount;//ÓÃ»§ÕËºÅ
+             $condition["time"]=$time;//Ê±¼ä
+             $condition["crl"]=$crl;
+             $condition["hc"]=$hc;
+             $condition["bpd"]=$bpd;
+             $condition["ac"]=$ac;
+             $condition["fl"]=$fl;
+             $condition["ofd"]=$ofd;
+             $condition["wg"]=$wg;
+             $result=$table->add($condition);//½«ÔĞ¸¾²âÊÔµÄB³¬Êı¾İÌí¼Óµ½Êı¾İ¿â
+              if($result){
+                        $back=array("flag"=>1);//·µ»Ø1±íÊ¾Ìí¼Ó³É¹¦
+                    }else{
+                        $back=array("flag"=>0);//·µ»Ø0±íÊ¾Ìí¼ÓÊ§°Ü
+                    }
+           }
+
+        }else{
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
+            }
+      $this->ajaxReturn($back, "json");
+    }
+
+    /*ÊÖ»ú¶ËÔĞ¸¾ÌåÖØ²âÁ¿Êı¾İµÄÌí¼ÓºóÌ¨*/
+    public function pregWeightAdd(){
+        $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+        $userAccount=I("post.userAccount");//²ÎÊıÅĞ¶Ï
+        $time=I("post.time");
+        $weight=I("post.weight");
+        $table=M("pregWeight");
+       if($token==$_SESSION["currentLogin"]){
+           $check = $table->where("userAccount='$userAccount' and time='$time'")->find();
+           if($check){
+             $back=array("flag"=>2);//·µ»Ø2±íÊ¾¸ÃÈÕµÄÊı¾İÒÑ¾­´æÔÚ£¬²»ÄÜÖØ¸´Ìí¼Ó
+           }else{
+              $condition["userAccount"]=$userAccount;//ÓÃ»§ÕËºÅ
+              $condition["time"]=$time;//Ê±¼ä
+              $condition["weight"]=$weight;
+              $result=$table->add($condition);//½«ÔĞ¸¾²âÊÔµÄÌåÖØÊı¾İÌí¼Óµ½Êı¾İ¿â
+              if($result){
+                        $back=array("flag"=>1);//·µ»Ø1±íÊ¾Ìí¼Ó³É¹¦
+                    }else{
+                        $back=array("flag"=>0);//·µ»Ø0±íÊ¾Ìí¼ÓÊ§°Ü
+                    }
+            }
+         }else{
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
+            }
+        $this->ajaxReturn($back, "json");
+    }
+
+
+    /*ÊÖ»ú¶ËÉí¸ß¡¢ÌåÖØ¡¢Í·Î§¡¢BMIµÄĞŞ¸ÄºóÌ¨*/
     public function dataEdit(){
-        $token=I("post.token");//è·å–èº«ä»½ä»¤ç‰Œ
+        $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
         $parm=I("post.parm");
         $data=I("post.data");
         $importTime=I("post.importTime");
@@ -225,7 +293,7 @@ class MobileController extends Controller
 //        $time=date("Y-m-d",time());
         $table=M("measureData");
         if($token==$_SESSION["currentLogin"]) {
-            if ($parm && $data && $importTime && $childID) {
+            if (isset($parm) && isset($data) && isset($importTime) && isset($childID)) {
                 switch ($parm) {
                     case "height": {
                         $condition["childHeight"] = $data;
@@ -244,48 +312,160 @@ class MobileController extends Controller
                         break;
                     }
                 };
-                $result = $table->where("childID='$childID'and importTime='$importTime'")->save($condition);//å°†æ‰‹æœºç«¯ç”¨æˆ·éœ€è¦ä¿®æ”¹çš„æ•°æ®æ›´æ–°æ•°æ®åº“
-                if ($result!==false) {//æ›´æ–°æˆåŠŸè¿”å›å‘ç”Ÿå˜åŒ–çš„è¡Œæ•°ï¼Œæ›´æ–°å¤±è´¥ä¼šè¿”å›falseï¼Œæ‰€ä»¥å¦‚æœæ•°æ®æœªå‘ç”Ÿå˜åŒ–ä¼šè¿”å›0ï¼Œå› æ­¤è¿™é‡Œç”¨falseåˆ¤æ–­
-                    $back = array("flag" => 1);//è¿”å›1è¡¨ç¤ºä¿®æ”¹æˆåŠŸ
+                $result = $table->where("childID='$childID'and importTime='$importTime'")->save($condition);//½«ÊÖ»ú¶ËÓÃ»§ĞèÒªĞŞ¸ÄµÄÊı¾İ¸üĞÂÊı¾İ¿â
+                if ($result!==false) {//¸üĞÂ³É¹¦·µ»Ø·¢Éú±ä»¯µÄĞĞÊı£¬¸üĞÂÊ§°Ü»á·µ»Øfalse£¬ËùÒÔÈç¹ûÊı¾İÎ´·¢Éú±ä»¯»á·µ»Ø0£¬Òò´ËÕâÀïÓÃfalseÅĞ¶Ï
+                    $back = array("flag" => 1);//·µ»Ø1±íÊ¾ĞŞ¸Ä³É¹¦
                 } else {
-                    $back = array("flag" => 0);//è¿”å›0è¡¨ç¤ºä¿®æ”¹å¤±è´¥
+                    $back = array("flag" => 0);//·µ»Ø0±íÊ¾ĞŞ¸ÄÊ§°Ü
                 }
             } else {
-                $back = array("flag" => 2);//è¿”å›0è¡¨ç¤ºæ”¶åˆ°çš„æ•°æ®æœ‰ç©ºå€¼
+                $back = array("flag" => 2);//·µ»Ø2±íÊ¾ÊÕµ½µÄÊı¾İÓĞ¿ÕÖµ
             }
         }else{
-            $back=array("flag"=>4);//è¿”å›4è¡¨ç¤ºtokenä¸æ­£ç¡®æˆ–è€…è¿‡æœŸï¼Œéœ€è¦å®¢æˆ·ç«¯é‡æ–°ç™»å½•
+            $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
         }
+        $this->ajaxReturn($back, "json");
+    }
+     
+    /*ÊÖ»ú¶ËÔĞ¸¾B³¬²âÁ¿Êı¾İµÄĞŞ¸ÄºóÌ¨*/
+    public function BmodeDataEdit(){
+        $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+        $userAccount=I("post.userAccount");
+        $time=I("post.time");
+        $crl=I("post.crl");
+        $hc=I("post.hc");
+        $bpd=I("post.bpd");
+        $ac=I("post.ac");
+        $fl=I("post.fl");
+        $ofd=I("post.ofd");
+        $wg=I("post.wg");
+        $table=M("bmodeData");
+        if($token==$_SESSION["currentLogin"]){
+           if (isset($userAccount )&& isset($time) && isset($crl)&& isset($hc)&& isset($bpd)&& isset($ac)&& isset($fl)&& isset($ofd)&& isset($wg)) {
+             $condition["crl"]=$crl;
+             $condition["hc"]=$hc;
+             $condition["bpd"]=$bpd;
+             $condition["ac"]=$ac;
+             $condition["fl"]=$fl;
+             $condition["ofd"]=$ofd;
+             $condition["wg"]=$wg;
+             $result = $table->where("userAccount='$userAccount'and time='$time'")->save($condition);//½«ÔĞ¸¾ĞŞ¸ÄµÄB³¬Êı¾İ¸üĞÂÊı¾İ¿â
+                if ($result!==false) {//¸üĞÂ³É¹¦·µ»Ø·¢Éú±ä»¯µÄĞĞÊı£¬¸üĞÂÊ§°Ü»á·µ»Øfalse£¬ËùÒÔÈç¹ûÊı¾İÎ´·¢Éú±ä»¯»á·µ»Ø0£¬Òò´ËÕâÀïÓÃfalseÅĞ¶Ï
+                    $back = array("flag" => 1);//·µ»Ø1±íÊ¾ĞŞ¸Ä³É¹¦
+                } else {
+                    $back = array("flag" => 0);//·µ»Ø0±íÊ¾ĞŞ¸ÄÊ§°Ü
+                }
+           }else{
+               $back = array("flag" => 2);//·µ»Ø2±íÊ¾ÊÕµ½µÄÊı¾İÓĞ¿ÕÖµ
+           }
+
+        }else{
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
+            }
+      $this->ajaxReturn($back, "json");
+    }
+
+       /*ÊÖ»ú¶ËÔĞ¸¾ÌåÖØ²âÁ¿Êı¾İµÄĞŞ¸ÄºóÌ¨*/
+    public function pregWeightEdit(){
+        $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+        $userAccount=I("post.userAccount");
+        $time=I("post.time");
+        $weight=I("post.weight");
+        $table=M("pregWeight");
+       if($token==$_SESSION["currentLogin"]){
+         if (isset($userAccount) && isset($time) && isset($weight)) {
+              $condition["weight"]=$weight;
+              $result = $table->where("userAccount='$userAccount'and time='$time'")->save($condition);//½«ÔĞ¸¾ĞŞ¸ÄµÄB³¬Êı¾İ¸üĞÂÊı¾İ¿â
+                if ($result!==false) {//¸üĞÂ³É¹¦·µ»Ø·¢Éú±ä»¯µÄĞĞÊı£¬¸üĞÂÊ§°Ü»á·µ»Øfalse£¬ËùÒÔÈç¹ûÊı¾İÎ´·¢Éú±ä»¯»á·µ»Ø0£¬Òò´ËÕâÀïÓÃfalseÅĞ¶Ï
+                    $back = array("flag" => 1);//·µ»Ø1±íÊ¾ĞŞ¸Ä³É¹¦
+                } else {
+                    $back = array("flag" => 0);//·µ»Ø0±íÊ¾ĞŞ¸ÄÊ§°Ü
+                }
+            }else{ 
+               $back = array("flag" => 2);//·µ»Ø2±íÊ¾ÊÕµ½µÄÊı¾İÓĞ¿ÕÖµ
+             }
+         }else{
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
+            }
         $this->ajaxReturn($back, "json");
     }
 
 
-        /*æ‰‹æœºç«¯èº«é«˜ã€ä½“é‡ã€å¤´å›´ã€BMIçš„åˆ é™¤åå°*/
+        /*ÊÖ»ú¶ËÉí¸ß¡¢ÌåÖØ¡¢Í·Î§¡¢BMIµÄÉ¾³ıºóÌ¨*/
         public function dataDelete()
         {
-            $token=I("post.token");//è·å–èº«ä»½ä»¤ç‰Œ
+            $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
             $childID=I("post.childID");
             $importTime=I("post.importTime");
             $table=M("measureData");
             if($token==$_SESSION["currentLogin"]) {
                 if ($childID && $importTime) {
-                    $result = $table->where("childID='$childID'and importTime='$importTime'")->delete();//å°†æ‰‹æœºç«¯ç”¨æˆ·éœ€è¦åˆ é™¤çš„æ•°æ®è¿›è¡Œåˆ é™¤
+                    $result = $table->where("childID='$childID'and importTime='$importTime'")->delete();//½«ÊÖ»ú¶ËÓÃ»§ĞèÒªÉ¾³ıµÄÊı¾İ½øĞĞÉ¾³ı
                     if ($result) {
-                        $back = array("flag" => 1);//è¿”å›1è¡¨ç¤ºåˆ é™¤æˆåŠŸ
+                        $back = array("flag" => 1);//·µ»Ø1±íÊ¾É¾³ı³É¹¦
                     } else {
-                        $back = array("flag" => 0);//è¿”å›0è¡¨ç¤ºåˆ é™¤å¤±è´¥
+                        $back = array("flag" => 0);//·µ»Ø0±íÊ¾É¾³ıÊ§°Ü
                     }
                 } else {
-                    $back = array("flag" => 2);//è¿”å›2è¡¨ç¤ºæ”¶åˆ°çš„æ•°æ®æœ‰ç©ºå€¼
+                    $back = array("flag" => 2);//·µ»Ø2±íÊ¾ÊÕµ½µÄÊı¾İÓĞ¿ÕÖµ
                 }
             }else{
-                $back=array("flag"=>4);//è¿”å›4è¡¨ç¤ºtokenä¸æ­£ç¡®æˆ–è€…è¿‡æœŸï¼Œéœ€è¦å®¢æˆ·ç«¯é‡æ–°ç™»å½•
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
             }
             $this->ajaxReturn($back,"json");
         }
-        /*æ‰‹æœºç«¯å„¿ç«¥åŸºæœ¬ä¿¡æ¯ä¿®æ”¹*/
+
+    /*ÊÖ»ú¶ËÔĞ¸¾B³¬²âÁ¿Êı¾İµÄÉ¾³ıºóÌ¨*/
+    public function BmodeDataDelete(){
+        $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+        $userAccount=I("post.userAccount");
+        $time=I("post.time");
+        $table=M("bmodeData");
+        if($token==$_SESSION["currentLogin"]){
+          if ($userAccount && $time) {
+              $result = $table->where("userAccount='$userAccount'and time='$time'")->delete();//½«ĞèÒªÉ¾³ıµÄÔĞ¸¾B³¬²âÁ¿Êı¾İ½øĞĞÉ¾³ı
+                    if ($result) {
+                        $back = array("flag" => 1);//·µ»Ø1±íÊ¾É¾³ı³É¹¦
+                    } else {
+                        $back = array("flag" => 0);//·µ»Ø0±íÊ¾É¾³ıÊ§°Ü
+                    }
+           }else{
+               $back = array("flag" => 2);//·µ»Ø2±íÊ¾ÊÕµ½µÄÊı¾İÓĞ¿ÕÖµ
+           }
+
+        }else{
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
+            }
+      $this->ajaxReturn($back, "json");
+    }
+
+    /*ÊÖ»ú¶ËÔĞ¸¾ÌåÖØ²âÁ¿Êı¾İµÄÉ¾³ıºóÌ¨*/
+    public function pregWeightDelete(){
+        $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+        $userAccount=I("post.userAccount");
+        $time=I("post.time");
+        $table=M("pregWeight");
+        if($token==$_SESSION["currentLogin"]){
+          if ($userAccount && $time) {
+              $result = $table->where("userAccount='$userAccount'and time='$time'")->delete();//½«ĞèÒªÉ¾³ıµÄÔĞ¸¾ÌåÖØ²âÁ¿Êı¾İ½øĞĞÉ¾³ı
+                    if ($result) {
+                        $back = array("flag" => 1);//·µ»Ø1±íÊ¾É¾³ı³É¹¦
+                    } else {
+                        $back = array("flag" => 0);//·µ»Ø0±íÊ¾É¾³ıÊ§°Ü
+                    }
+           }else{
+               $back = array("flag" => 2);//·µ»Ø2±íÊ¾ÊÕµ½µÄÊı¾İÓĞ¿ÕÖµ
+           }
+
+        }else{
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
+            }
+      $this->ajaxReturn($back, "json");
+    }
+
+        /*ÊÖ»ú¶Ë¶ùÍ¯»ù±¾ĞÅÏ¢ĞŞ¸Ä*/
         public function childInfoEdit(){
-            $token=I("post.token");//è·å–èº«ä»½ä»¤ç‰Œ
+            $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
             $childID=I("post.childID");
             $childName=I("post.childName");
 //            $childIcon=I("post.childIcon");
@@ -299,19 +479,19 @@ class MobileController extends Controller
                 $condition["childSex"]=$childSex;
                 $result=$table->where("childID=$childID")->save($condition);
                 if($result!==false){
-                    $back=array("flag"=>1);//è¿”å›1è¡¨ç¤ºä¿®æ”¹æˆåŠŸ
+                    $back=array("flag"=>1);//·µ»Ø1±íÊ¾ĞŞ¸Ä³É¹¦
                 }else {
-                    $back = array("flag" => 0);//è¿”å›0è¡¨ç¤ºä¿®æ”¹å¤±è´¥
+                    $back = array("flag" => 0);//·µ»Ø0±íÊ¾ĞŞ¸ÄÊ§°Ü
                 }
             }else{
-              $back=array("flag"=>4);//è¿”å›4è¡¨ç¤ºtokenä¸æ­£ç¡®æˆ–è€…è¿‡æœŸï¼Œéœ€è¦å®¢æˆ·ç«¯é‡æ–°ç™»å½•
+              $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
             }
             $this->ajaxReturn($back,"json");
         }
 
-        /*æ‰‹æœºç«¯ç”¨æˆ·æ–°å¢åä¸‹çš„å„¿ç«¥è´¦å·*/
+        /*ÊÖ»ú¶ËÓÃ»§ĞÂÔöÃûÏÂµÄ¶ùÍ¯ÕËºÅ*/
         public function addChildID(){
-            $token=I("post.token");//è·å–èº«ä»½ä»¤ç‰Œ
+            $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
             $childID=I("post.childID");
             $userAccount=I("post.userAccount");
             $childName=I("post.childName");
@@ -323,14 +503,17 @@ class MobileController extends Controller
             $fullMonth=I("post.fullMonth");
             $fatherHeight=I("post.fatherHeight");
             $motherHeight=I("post.motherHeight");
+            $birthHeight=I("post.birthHeight");
+            $birthWeight=I("post.birthWeight");
+            $birthHeadc=I("post.birthHeadc");
             $table1=M("childBaseInfo");
             $table2=M("measureData");
             if($token==$_SESSION["currentLogin"]) {
                 $check = $table1->where("childID='$childID'")->find();
                 if ($check) {
-                    $back = array("flag" => 2);//è¿”å›2è¡¨ç¤ºæ–°å¢çš„å„¿ç«¥IDå·²å­˜åœ¨
+                    $back = array("flag" => 2);//·µ»Ø2±íÊ¾ĞÂÔöµÄ¶ùÍ¯IDÒÑ´æÔÚ
                 } else {
-                    //å»ºç«‹å„¿ç«¥IDåŸºæœ¬ä¿¡æ¯
+                    //½¨Á¢¶ùÍ¯ID»ù±¾ĞÅÏ¢
                     $condition["userAccount"]=$userAccount;
                     $condition["childID"]=$childID;
                     $condition["childName"]=$childName;
@@ -342,10 +525,8 @@ class MobileController extends Controller
                     $condition["fullMonth"]=$fullMonth;
                     $condition["fatherHeight"]=$fatherHeight;
                     $condition["motherHeight"]=$motherHeight;
-                    $birthHeight=I("post.birthHeight");
-                    $birthWeight=I("post.birthWeight");
-                    $birthHeadc=I("post.birthHeadc");
-                    //åœ¨å„¿ç«¥æ•°æ®è¡¨ä¸­æ·»åŠ å‡ºç”Ÿæ—¶çš„åˆå§‹æ•°æ®
+    
+                    //ÔÚ¶ùÍ¯Êı¾İ±íÖĞÌí¼Ó³öÉúÊ±µÄ³õÊ¼Êı¾İ
                     $condition2["childID"]=$childID;
                     $condition2["userAccount"]=$userAccount;
                     $condition2["childHeight"]=$birthHeight;
@@ -358,59 +539,129 @@ class MobileController extends Controller
                     $result1=$table1->add($condition);
                     $result2=$table2->add($condition2);
                     if($result1&&$result2){
-                        $back=array("flag"=>1);//è¿”å›1è¡¨ç¤ºæ–°å¢å„¿ç«¥IDæˆåŠŸ
+                        $back=array("flag"=>1);//·µ»Ø1±íÊ¾ĞÂÔö¶ùÍ¯ID³É¹¦
                     }else{
-                        $back=array("flag"=>0);//è¿”å›0è¡¨ç¤ºæ–°å¢å¤±è´¥
+                        $back=array("flag"=>0);//·µ»Ø0±íÊ¾ĞÂÔöÊ§°Ü
                     }
                 }
             }else{
-                $back=array("flag"=>4);//è¿”å›4è¡¨ç¤ºtokenä¸æ­£ç¡®æˆ–è€…è¿‡æœŸï¼Œéœ€è¦å®¢æˆ·ç«¯é‡æ–°ç™»å½•
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
             }
             $this->ajaxReturn($back,"json");
         }
 
-      /*æ‰‹æœºç«¯ç”¨æˆ·åˆ é™¤åä¸‹çš„å„¿ç«¥è´¦å·*/
+        /*ÊÖ»ú¶ËÓÃ»§ĞÂÔöÃûÏÂµÄÔĞ¸¾ÕËºÅ*/
+         public function addPregID(){
+            $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+            $userAccount=I("post.userAccount");
+            $userName=I("post.userName");
+//          $Icon=I("post.icon");
+            $name=I("post.name");
+            $pregnantTime=I("post.pregnantTime");
+            $expectedChildbirth=I("post.expectedChildbirth");
+            $fatherHeight=I("post.fatherHeight");
+            $motherHeight=I("post.motherHeight");
+            $normalWeight=I("post.normalWeight"); 
+            $table=M("pregBaseInfo");
+           if($token==$_SESSION["currentLogin"]) {
+              $check=$table->where("userAccount='$userAccount'")->find();
+               if ($check) {
+                    $back = array("flag" => 2);//·µ»Ø2±íÊ¾ĞÂÔöµÄÔĞ¸¾ÕÊºÅÒÑ´æÔÚ
+                } else {
+                      //½¨Á¢ÔĞ¸¾µÄ»ù±¾ĞÅÏ¢
+                      $condition["name"]=$name;
+                      $condition["pregnantTime"]=$pregnantTime;
+                      $condition["expectedChildbirth"]=$expectedChildbirth;
+                      $condition["fatherHeight"]=$fatherHeight;
+//                    $condition["icon"]=$icon;
+                      $condition["motherHeight"]=$motherHeight;
+                      $condition["normalWeight"]=$normalWeight;
+                     
+                      $result=$table->add($condition);
+                      if($result){
+                           $back=array("flag"=>1);//·µ»Ø1±íÊ¾ĞÂÔöÔĞ¸¾ÕÊºÅ³É¹¦
+                        }else{
+                           $back=array("flag"=>0);//·µ»Ø0±íÊ¾ĞÂÔöÊ§°Ü
+                        }
+                    }
+            }else{
+                $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
+            }
+            $this->ajaxReturn($back,"json");
+        }  
+
+
+
+      /*ÊÖ»ú¶ËÓÃ»§É¾³ıÃûÏÂµÄ¶ùÍ¯ÕËºÅ*/
        public function deleteChildID(){
-           $token=I("post.token");//è·å–èº«ä»½ä»¤ç‰Œ
+           $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
            $childID=I("post.childID");
            $table1=M("childBaseInfo");
            $table2=M("measureData");
            if($token==$_SESSION["currentLogin"]) {
                if($childID){
-                   $result1=$table1->where("childID='$childID'")->delete();//åˆ é™¤å„¿ç«¥IDåŸºæœ¬ä¿¡æ¯
-                   $result2=$table2->where("childID='$childID'")->delete();//åˆ é™¤å„¿ç«¥IDæµ‹é‡æ•°æ®
+                   $result1=$table1->where("childID='$childID'")->delete();//É¾³ı¶ùÍ¯ID»ù±¾ĞÅÏ¢
+                   $result2=$table2->where("childID='$childID'")->delete();//É¾³ı¶ùÍ¯ID²âÁ¿Êı¾İ
                    if($result1&&$result2){
-                       $back=array("flag"=>1);//è¿”å›1è¡¨ç¤ºåˆ é™¤æˆåŠŸ
+                       $back=array("flag"=>1);//·µ»Ø1±íÊ¾É¾³ı³É¹¦
                    }else{
-                       $back=array("flag"=>0);//è¿”å›0è¡¨ç¤ºåˆ é™¤å¤±è´¥
+                       $back=array("flag"=>0);//·µ»Ø0±íÊ¾É¾³ıÊ§°Ü
                    }
                }else{
-                   $back=array("flag"=>2);//è¿”å›2è¡¨ç¤ºæ”¶åˆ°çš„å„¿ç«¥IDä¸ºç©º
+                   $back=array("flag"=>2);//·µ»Ø2±íÊ¾ÊÕµ½µÄ¶ùÍ¯IDÎª¿Õ
                }
            }else{
-               $back=array("flag"=>4);//è¿”å›4è¡¨ç¤ºtokenä¸æ­£ç¡®æˆ–è€…è¿‡æœŸï¼Œéœ€è¦å®¢æˆ·ç«¯é‡æ–°ç™»å½•
+               $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
            }
            $this->ajaxReturn($back,"json");
        }
-    /*æ‰‹æœºç«¯å„¿ç«¥èº«é«˜ä½“é‡å¤´å›´BMIåœ¨åŒé¾„å„¿ç«¥ä¸­çš„æ’åº*/
+
+     // ÊÖ»ú¶ËÔĞ¸¾µÄbaby³öÉúÊı¾İÌí¼Ó
+       public function addBirthData(){
+            $userAccount=I("post.userAccount");
+            $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+            $sex=I("post.sex");
+            $birthdate=I("post.birthdate");
+            $birthHeight=I("post.birthHeight");
+            $birthWeight=I("post.birthWeight");
+            $birthHeadc=I("post.birthHeadc");
+            if($token==$_SESSION["currentLogin"]) {
+                 $table=M("pregBaseInfo");//ÔĞ¸¾ĞÅÏ¢±í
+                 $condition["sex"]=$sex;
+                 $condition["birthdate"]=$birthdate;
+                 $condition["birthHeight"]=$birthHeight;
+                 $condition["birthWeight"]=$birthWeight;
+                 $condition["birthHeadc"]=$birthHeadc;
+                 $result = $table->where("userAccount='$userAccount'")->save($condition);//Ìí¼ÓÊı¾İ
+                if ($result!==false) {//¸üĞÂ³É¹¦·µ»Ø·¢Éú±ä»¯µÄĞĞÊı£¬¸üĞÂÊ§°Ü»á·µ»Øfalse£¬ËùÒÔÈç¹ûÊı¾İÎ´·¢Éú±ä»¯»á·µ»Ø0£¬Òò´ËÕâÀïÓÃfalseÅĞ¶Ï
+                    $back = array("flag" => 1);//·µ»Ø1±íÊ¾ĞŞ¸Ä³É¹¦
+                } else {
+                    $back = array("flag" => 0);//·µ»Ø0±íÊ¾ĞŞ¸ÄÊ§°Ü
+                }
+            }else{
+               $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
+              }
+       }
+       
+    /*ÊÖ»ú¶Ë¶ùÍ¯Éí¸ßÌåÖØÍ·Î§BMIÔÚÍ¬Áä¶ùÍ¯ÖĞµÄÅÅĞò*/
        public function childDataOrder(){
            $childID=I("post.childID");
            $childBirthdate=I("post.childBirthdate");
            $latestDate=I("post.latestDate");
-           $token=I("post.token");//è·å–èº«ä»½ä»¤ç‰Œ
-           if($token==$_SESSION["currentLogin"]) {
-               if($childID&&$childBirthdate){
+           $token=I("post.token");//»ñÈ¡Éí·İÁîÅÆ
+           //if($token==$_SESSION["currentLogin"]) {
+               if(isset($childID)&&isset($childBirthdate)){
                    $table=M("measureData");
                    $childAge=$this->timeInterval($childBirthdate,$latestDate);
                    $latestData=$table->where("importTime='$latestDate'and childID='$childID'")->getField("childAge,childHeight,childWeight,childHeadc,childBMI");
-                   $choiceHeight=$latestData[$childAge]['childheight'];//ä»ç¬¬ä¸€æ¬¡æŸ¥è¯¢çš„å„¿ç«¥æ•°æ®ä¸­åˆ†åˆ«æå–å‡ºèº«é«˜ã€ä½“é‡ã€å¤´å›´ã€BMI
+                   $choiceHeight=$latestData[$childAge]['childheight'];//´ÓµÚÒ»´Î²éÑ¯µÄ¶ùÍ¯Êı¾İÖĞ·Ö±ğÌáÈ¡³öÉí¸ß¡¢ÌåÖØ¡¢Í·Î§¡¢BMI
                    $choiceWeight=$latestData[$childAge]['childweight'];
                    $choiceHeadc=$latestData[$childAge]['childheadc'];
                    $choiceBMI=$latestData[$childAge]['childbmi'];
 
-                   $allSuitChild=$table->where("childAge-'$childAge' between -180 and 180")->count();//é€‚é¾„å„¿ç«¥æ€»æ•°
+                   $allSuitChild=$table->where("childAge-'$childAge' between -180 and 180")->count();//ÊÊÁä¶ùÍ¯×ÜÊı
 
-                   $resultHeight=$table->where("(childAge-'$childAge' between -180 and 180) and childHeight > '$choiceHeight'")->count();//æ•°æ®çš„æ’å
+                   $resultHeight=$table->where("(childAge-'$childAge' between -180 and 180) and childHeight > '$choiceHeight'")->count();//Êı¾İµÄÅÅÃû
                    $resultWeight=$table->where("(childAge-'$childAge' between -180 and 180) and childWeight > '$choiceWeight'")->count();
                    $resultHeadc=$table->where("(childAge-'$childAge' between -180 and 180) and childHeadc > '$choiceHeadc'")->count();
                    $resultBMI=$table->where("(childAge-'$childAge' between -180 and 180) and childBMI > '$choiceBMI'")->count();
@@ -418,20 +669,20 @@ class MobileController extends Controller
                    $back=array("flag"=>1,"heightRand"=>($allSuitChild-($resultHeight+1))/$allSuitChild,"weightRand"=>($allSuitChild-($resultWeight+1))/$allSuitChild,"headcRand"=>($allSuitChild-($resultHeadc+1))/$allSuitChild,"bmiRand"=>($allSuitChild-($resultBMI+1))/$allSuitChild);
 //                     $back=array("flag"=>1,"data"=>$latestData[$childAge]['childheight']);
                }else{
-                   $back=array("flag"=>2);//è¿”å›2è¡¨ç¤ºæ”¶åˆ°çš„å„¿ç«¥IDæˆ–è€…å‡ºç”Ÿæ—¥æœŸå­˜åœ¨ç©ºå€¼
+                   $back=array("flag"=>2);//·µ»Ø2±íÊ¾ÊÕµ½µÄ¶ùÍ¯ID»òÕß³öÉúÈÕÆÚ´æÔÚ¿ÕÖµ
                }
-           }else{
-               $back=array("flag"=>4);//è¿”å›4è¡¨ç¤ºtokenä¸æ­£ç¡®æˆ–è€…è¿‡æœŸï¼Œéœ€è¦å®¢æˆ·ç«¯é‡æ–°ç™»å½•
-           }
+         //  }else{
+          //     $back=array("flag"=>4);//·µ»Ø4±íÊ¾token²»ÕıÈ·»òÕß¹ıÆÚ£¬ĞèÒª¿Í»§¶ËÖØĞÂµÇÂ¼
+          // }
            $this->ajaxReturn($back,"json");
        }
-    /*æ—¶é—´ä¸­çš„å¹´æœˆæ›¿æ¢ä¸º-*/
+    /*Ê±¼äÖĞµÄÄêÔÂÌæ»»Îª-*/
     private function timeReplace(){
-//        mb_regex_encoding('utf-8');//è®¾ç½®æ­£åˆ™æ›¿æ¢æ‰€ç”¨åˆ°çš„ç¼–ç 
+//        mb_regex_encoding('utf-8');//ÉèÖÃÕıÔòÌæ»»ËùÓÃµ½µÄ±àÂë
 //        return mb_ereg_replace('[^0-9]', '-', $parm);
-        echo date('Y-m-d', strtotime('2016å¹´05æœˆ29æ—¥'));
+        echo date('Y-m-d', strtotime('2016Äê05ÔÂ29ÈÕ'));
     }
-    /*è®¡ç®—ä¸¤ä¸ªæ—¶é—´å€¼ä¹‹é—´çš„é—´éš”*/
+    /*¼ÆËãÁ½¸öÊ±¼äÖµÖ®¼äµÄ¼ä¸ô*/
     private function timeInterval($str1,$str2){
         $year=substr($str2,0,4)-substr($str1,0,4);
         $month=substr($str2,5,2)-substr($str1,5,2);
@@ -441,15 +692,15 @@ class MobileController extends Controller
 
 //    public function setUserIcon()
 //    {
-//        //éšè—è¾“å‡ºçš„noticeå’Œwaringä¿¡æ¯
+//        //Òş²ØÊä³öµÄnoticeºÍwaringĞÅÏ¢
 //        error_reporting(E_ALL ^ E_NOTICE);
 //        error_reporting(E_ALL ^ E_WARNING);
 //        $userAccount = $_SESSION["medicalID"];
 //        $dataCheck = A("DataCheck");
-//        define("fileStore", "Public/image/userIcon");//æ–‡ä»¶å­˜å‚¨çš„ä¸»ç›®å½•(åœ¨thinkphpæ¡†æ¶ä¸­ä½ç½®å’Œåé¢çš„æ•°æ®åº“å­˜å‚¨åœ°å€ä¸ä¸€æ ·ã€‚æ— è¯­)
+//        define("fileStore", "Public/image/userIcon");//ÎÄ¼ş´æ´¢µÄÖ÷Ä¿Â¼(ÔÚthinkphp¿ò¼ÜÖĞÎ»ÖÃºÍºóÃæµÄÊı¾İ¿â´æ´¢µØÖ·²»Ò»Ñù¡£ÎŞÓï)
 //        date_default_timezone_set("PRC");
-//        //è®¾ç½®å…è®¸ä¸Šä¼ çš„æ–‡ä»¶çš„æ ¼å¼
-//        //$imageCount = count($_FILES['photo']['name']);//è·å–ä¸Šä¼ å›¾ç‰‡çš„æ•°é‡
+//        //ÉèÖÃÔÊĞíÉÏ´«µÄÎÄ¼şµÄ¸ñÊ½
+//        //$imageCount = count($_FILES['photo']['name']);//»ñÈ¡ÉÏ´«Í¼Æ¬µÄÊıÁ¿
 //        //for($i=0;$i<$imageCount;$i++){
 //        if (is_uploaded_file($_FILES["photo"]["tmp_name"])) {
 //
@@ -457,60 +708,60 @@ class MobileController extends Controller
 //                || ($_FILES["photo"]["type"] == "image/jpeg")
 //                || ($_FILES["photo"]["type"] == "image/pjpeg")
 //            ) {
-//                //è®¾ç½®å…è®¸ä¸Šä¼ çš„æ–‡ä»¶çš„å¤§å°
+//                //ÉèÖÃÔÊĞíÉÏ´«µÄÎÄ¼şµÄ´óĞ¡
 //                if (($_FILES["photo"]["size"] < 500000)) {
 //                    chdir(fileStore);
 //                    $mainPath = $medicalID;
 //                    $path = date('Ymd', time());
-//                    if (!is_dir($mainPath)) { //æŒ‰ç”¨æˆ·ååˆ›å»ºä¸»æ–‡ä»¶å¤¹
+//                    if (!is_dir($mainPath)) { //°´ÓÃ»§Ãû´´½¨Ö÷ÎÄ¼ş¼Ğ
 //                        mkdir($mainPath);
 //                    }
 //                    chdir($mainPath);
-//                    if (!is_dir($path)) { //æŒ‰æ—¥æœŸåˆ›å»ºå›¾ç‰‡å­˜å‚¨æ–‡ä»¶å¤¹ï¼Œè‹¥ä¸å­˜åœ¨ï¼Œå…ˆç”Ÿæˆæ–‡ä»¶å¤¹ï¼ˆè¿™é‡Œæœ‰ä¸ªé—®é¢˜ï¼Œå› ä¸ºæœ‰ä¸¤ä¸ªä¸Šä¼ æ¡†ï¼Œæ¯æ¬¡ç¬¬äºŒå¼ å›¾ç‰‡ä»ç„¶ä¼šåˆ¤æ–­æˆç›®å½•ä¸å­˜åœ¨ï¼‰
+//                    if (!is_dir($path)) { //°´ÈÕÆÚ´´½¨Í¼Æ¬´æ´¢ÎÄ¼ş¼Ğ£¬Èô²»´æÔÚ£¬ÏÈÉú³ÉÎÄ¼ş¼Ğ£¨ÕâÀïÓĞ¸öÎÊÌâ£¬ÒòÎªÓĞÁ½¸öÉÏ´«¿ò£¬Ã¿´ÎµÚ¶şÕÅÍ¼Æ¬ÈÔÈ»»áÅĞ¶Ï³ÉÄ¿Â¼²»´æÔÚ£©
 //                        mkdir($path);
 //                    }
 //                    chdir($path);
 //                    $date = date("-H-i-s.");
-//                    $photoType = pathinfo($_FILES["photo"]["name"], PATHINFO_EXTENSION); //è·å–å›¾ç‰‡åç¼€å
-//                    //  $photoType=substr($_FILES["photo"]["name"],-3);//è·å–å›¾ç‰‡åç¼€å
-//                    $photoNameSave = $path . $date . $photoType;//é‡æ–°æŒ‰ä¸Šä¼ æ—¶é—´ç”Ÿæˆå›¾ç‰‡å
+//                    $photoType = pathinfo($_FILES["photo"]["name"], PATHINFO_EXTENSION); //»ñÈ¡Í¼Æ¬ºó×ºÃû
+//                    //  $photoType=substr($_FILES["photo"]["name"],-3);//»ñÈ¡Í¼Æ¬ºó×ºÃû
+//                    $photoNameSave = $path . $date . $photoType;//ÖØĞÂ°´ÉÏ´«Ê±¼äÉú³ÉÍ¼Æ¬Ãû
 //                    $result = move_uploaded_file($_FILES["photo"]["tmp_name"], $photoNameSave);
 //
 //
-//                    //è‹¥å›¾ç‰‡ä¸Šä¼ æˆåŠŸï¼Œåˆ™æŠŠå›¾ç‰‡urlä¿å­˜åœ¨æ•°æ®åº“ä¸­ï¼Œæ–¹ä¾¿æŸ¥çœ‹
+//                    //ÈôÍ¼Æ¬ÉÏ´«³É¹¦£¬Ôò°ÑÍ¼Æ¬url±£´æÔÚÊı¾İ¿âÖĞ£¬·½±ã²é¿´
 //                    if ($result == 1) {
-//                        //echo "å›¾ç‰‡å·²ç»æˆåŠŸä¸Šä¼ !";
-//                        $photoURL = "../../public/others/teenagerGrow/userUploadPhoto/" . $mainPath . "/" . $path . "/" . $photoNameSave; //æ•°æ®åº“å­˜å‚¨çš„å›¾ç‰‡çš„ç›¸å¯¹è·¯å¾„
+//                        //echo "Í¼Æ¬ÒÑ¾­³É¹¦ÉÏ´«!";
+//                        $photoURL = "../../public/others/teenagerGrow/userUploadPhoto/" . $mainPath . "/" . $path . "/" . $photoNameSave; //Êı¾İ¿â´æ´¢µÄÍ¼Æ¬µÄÏà¶ÔÂ·¾¶
 //                        $photoSavePlace=fileStore."/". $mainPath . "/" . $path . "/" . $photoNameSave;
 //                        $conn = $dataCheck->data_connect();
 //                        if (!$conn) {
 //                            E('Could not connect to database.');
 //                        }
 //
-//                        mysqli_query($conn, "SET NAMES 'utf8'");//è®¾ç½®æ•°æ®åº“æ•°æ®çš„ç¼–ç ï¼Œä¸åŠ è¿™ä¸€å¥ä¸­æ–‡å­—ç¬¦æ— æ³•æ­£å¸¸æ˜¾ç¤º
+//                        mysqli_query($conn, "SET NAMES 'utf8'");//ÉèÖÃÊı¾İ¿âÊı¾İµÄ±àÂë£¬²»¼ÓÕâÒ»¾äÖĞÎÄ×Ö·ûÎŞ·¨Õı³£ÏÔÊ¾
 //                        $mess = "insert into tg_child_image (account,imageUrl,uploadTime,imageSavePlace) VALUES ('$medicalID','$photoURL','$path','$photoSavePlace')";
 //                        $last = mysqli_query($conn, $mess);
 //                        if (!$last) {
 //                            E('Could not register you in database - please try again later.');
 //                        } else {
-//                            $this->success("å›¾ç‰‡å·²ç»æˆåŠŸä¸Šä¼ ");
+//                            $this->success("Í¼Æ¬ÒÑ¾­³É¹¦ÉÏ´«");
 //                        }
 //                    }
 //
 //                } else {
-//                    $this->error("ä¸Šä¼ å¤±è´¥ï¼Œæ–‡ä»¶å¤§å°è¶…è¿‡é™åˆ¶");
+//                    $this->error("ÉÏ´«Ê§°Ü£¬ÎÄ¼ş´óĞ¡³¬¹ıÏŞÖÆ");
 //                }
 //
 //            } else {
-//                $this->error("ä¸Šä¼ å›¾ç‰‡çš„æ ¼å¼é”™è¯¯ï¼Œè¯·é€‰æ‹©æ­£ç¡®çš„æ–‡ä»¶æ ¼å¼");
+//                $this->error("ÉÏ´«Í¼Æ¬µÄ¸ñÊ½´íÎó£¬ÇëÑ¡ÔñÕıÈ·µÄÎÄ¼ş¸ñÊ½");
 //            }
 //        }
 //        if ($_FILES["photo"]["error"] > 0) {
-//            $this->error("ä¸Šä¼ å›¾ç‰‡å‡ºé”™ï¼Œè¯·é‡è¯•");
+//            $this->error("ÉÏ´«Í¼Æ¬³ö´í£¬ÇëÖØÊÔ");
 //        }
 //    }
 
-    /*ç”¨æˆ·é€€å‡ºç™»å½•*/
+    /*ÓÃ»§ÍË³öµÇÂ¼*/
     public function loginOut(){
          session("[start]");
          session("currentLogin",null);
